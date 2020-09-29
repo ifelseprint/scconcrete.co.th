@@ -11,12 +11,12 @@ body {
 }
 body {
 	font-family: 'Kanit', sans-serif;
-	font-size: 14px;
+	font-size: 13px;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-	background-color: #f5f5f5;
+	background-color: #fff;
 }
 ::-moz-selection {
     color: #fff;
@@ -547,6 +547,21 @@ blockquote.text-white cite span {
     margin-left: auto;
     margin-right: auto;
 }
+.header-social{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.header-social ul{
+    display: flex !important;
+    align-items: center !important;
+    margin: 0;
+}
+.header-social ul li a{
+    padding: 4px 8px;
+    border: 2px solid #444444;
+    border-radius: 50% 50%;
+    margin: auto 2px;
+}
 .logo {
     display: block;
     margin-top: 2.55rem;
@@ -729,6 +744,8 @@ blockquote.text-white cite span {
 .header-right .header-dropdown:first-child .header-menu {
     left: auto;
     right: 0;
+    background: transparent;
+    box-shadow: none;
 }
 .header-right .top-menu + .header-dropdown {
     margin-left: 2.5rem;
@@ -742,6 +759,7 @@ blockquote.text-white cite span {
 .header-middle .menu.sf-arrows > li > .sf-with-ul {
     padding-right: 1.5rem;
 }
+
 .cart-dropdown,
 .compare-dropdown {
     display: flex;
@@ -1260,14 +1278,14 @@ blockquote.text-white cite span {
 }
 .header-intro-clearance .header-middle .header-left,
 .header-intro-clearance .header-bottom .header-left {
-    flex: 0 0 calc((100% + 20px) / 4);
-    max-width: calc((100% + 20px) / 4);
+    /*flex: 0 0 calc((100% + 20px) / 4);
+    max-width: calc((100% + 20px) / 4);*/
     margin: 0;
 }
 .header-intro-clearance .header-middle .header-center,
 .header-intro-clearance .header-bottom .header-center {
-    flex: 0 0 calc((100% + 20px) / 2 - 20px);
-    max-width: calc((100% + 20px) / 2 - 20px);
+    /*flex: 0 0 calc((100% + 20px) / 2 - 20px);
+    max-width: calc((100% + 20px) / 2 - 20px);*/
     margin: 0;
 }
 .header-intro-clearance .header-middle .header-right,
@@ -1313,8 +1331,8 @@ blockquote.text-white cite span {
     font-size: 1.1rem;
 }
 .header-intro-clearance .header-middle .header-center {
-    max-width: calc((100% + 20px) / 3);
-    flex: 0 0 calc((100% + 20px) / 3);
+    /*max-width: calc((100% + 20px) / 3);
+    flex: 0 0 calc((100% + 20px) / 3);*/
     margin: auto;
 }
 .header-intro-clearance .header-middle .header-right {
@@ -1395,7 +1413,7 @@ blockquote.text-white cite span {
 .header-intro-clearance .line,
 .header-intro-clearance .facebook,
 .header-intro-clearance .language {
-    padding-left: 15px;
+    /*padding-left: 15px;*/
 }
 
 @media screen and (min-width: 992px) {
@@ -1591,7 +1609,7 @@ blockquote.text-white cite span {
     }
 }
 .main-nav {
-    margin-left: 2rem;
+    /*margin-left: 2rem;*/
     display: none;
 }
 .menu,
@@ -1699,9 +1717,10 @@ blockquote.text-white cite span {
     position: relative;
 }
 .menu > li > a {
-    color: #333;
+    color: #fff;
     letter-spacing: -0.01em;
-    padding: 3.95rem 3rem;
+    font-size: 12px;
+    padding: 10px 7px;
     text-transform: uppercase;
 }
 .menu > li + li {
@@ -1809,8 +1828,12 @@ blockquote.text-white cite span {
 .menu li:hover > a,
 .menu li.show > a,
 .menu li.active > a {
-	background: rgba(255, 255, 255, 0.8);
-    color: #075176;
+	background: #e10000;
+    color: #fff;
+}
+.menu li.telephone{
+    background: #e10000;
+    color: #fff;
 }
 .demo-list {
     display: flex;
@@ -2268,8 +2291,8 @@ blockquote.text-white cite span {
         margin-bottom: 0;
     }
     .sticky-header.fixed.header-middle .menu > li > a {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        /*padding-top: 2rem;
+        padding-bottom: 2rem;*/
     }
 }
 .mobile-menu-container {
@@ -2612,15 +2635,18 @@ p {
     letter-spacing: 0;
 }
 .header-2 {
-    background-color: #f5f5f5;
+    background-color: #444;
 }
 .header-2 .logo {
-    margin-top: 2.9rem;
-    margin-bottom: 2.9rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .header-2 .header-search-extended {
     margin-right: 0;
     max-width: none;
+}
+.header-2 .main-nav{
+    background-color: #444;
 }
 .header-2 .header-search-extended select,
 .header-2 .header-search-extended .form-control {
@@ -2667,8 +2693,8 @@ p {
     padding-bottom: 0.75rem;
 }
 .header-2 .language .header-dropdown a{
-	background: #000;
-	color: #fff;
+	background: #fff;
+    color: #000;
 	padding: 0.3rem 1.5rem;
     width: 52px;
 	border-radius: 0px;
@@ -2705,7 +2731,7 @@ p {
     color: #333;
 }
 .header-2 .sticky-header {
-    background-color: #e92336;
+    background-color: #ffffff;
 }
 .header-2 .mobile-menu-toggler {
     margin-left: 0;
@@ -4712,7 +4738,6 @@ p {
 }
 .footer-middle {
     padding: 6.7rem 0 2.2rem;
-    border-top: 0.1rem solid #ebebeb;
 }
 .footer-logo {
     margin-bottom: 2rem;
@@ -4878,6 +4903,7 @@ p {
 .footer-2 .footer-middle {
     padding-top: 4.5rem;
     padding-bottom: 0.4rem;
+    background: #fff;
 }
 .footer-2 .footer-bottom .container {
     padding-top: 15px;

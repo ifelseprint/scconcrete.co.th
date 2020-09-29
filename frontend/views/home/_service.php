@@ -1,66 +1,28 @@
-<?php
-use yii\helpers\Html;
-use yii\helpers\Url;
-?>
-<div id="loadingOverlay" class="loader-overlay" style="display: none;">
-	<div class="loader-content loader-center">
-		<div id="loading" class="loader"></div>
-	</div>
-</div>
-<div class="service-posts">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-lg-4 service-posts-item">
-    			<div class="entry entry-display">
-                    <figure class="entry-media">
-                        <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_service');?>">
-                            <img src ="<?=Url::base(true);?>/img/homa-service.jpg" alt="image desc">
-                        </a>
-                    </figure><!-- End .entry-media -->
-        		</div>
-        	</div>
-        	<?php
-    		foreach ($Service as $value) {
-    			$service_name = 'service_name_'.Yii::$app->language;
-    			$service_content = 'service_content_'.Yii::$app->language;
-    		?>
-        	<div class="col-xs-12 col-lg-4 service-posts-item">
-    			<div class="entry entry-display">
-                    <figure class="entry-media" style="height: 250px;overflow: hidden;">
-                        <a href="javascript:void(0)" class="btn-modal-view" value="<?=Yii::$app->language?>/service/view/<?=$value->service_id;?>">
-                        	<img src="<?=Url::base(true);?>/uploads/<?=$value->service_image_path?>/<?=$value->service_image?>" alt="<?=$value->$service_name?>" title="<?=$value->$service_name;?>">
-                        </a>
-                    </figure><!-- End .entry-media -->
-                    <div class="entry-body text-center">
-                        <h3 class="entry-title">
-                            <a href="javascript:void(0)" class="btn-modal-view" value="<?=Yii::$app->language?>/service/view/<?=$value->service_id;?>"><?=$value->$service_name;?></a>
-                        </h3><!-- End .entry-title -->
+<div style="background: #fff;">
+    <style type="text/css">
+        .service-border{
+            padding: 10px;
+            border: 3px solid #ed1c24;
+        }
 
-                        <div class="entry-content">
-                            <a href="javascript:void(0)" class="btn-modal-view" value="<?=Yii::$app->language?>/service/view/<?=$value->service_id;?>">
-                            	<?=$value->$service_content;?>
-                            </a>
-                        </div><!-- End .entry-content -->
-                	</div>
-        		</div>
-        	</div>
-        	<?php } ?>
-        	
-		</div>
-	</div>
-</div>
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-6" style="background: #f2f2f2">
+                <div style="padding: 25px;">
+                    <h1 style="color: #ed1c24; padding: 10px 0px; margin: 0px;font-size: 80px;font-weight: bold;">Services</h1>
+                    <div class="service-border"><h4 style="margin:0px;">คอนกรีตผสมเสร็จและผลิตภัณฑ์คอนกรีต</h4></div>
+                    <div style="padding: 15px 0px;">
+                        <p>SC PRECAST SOLUTION นั้น ได้มีการนำวัตกรรมใหม่ๆ และเทคโนโลยีที่ทันสมัย</p>
+                        <p>มาผลิตสินค้า Precast พื้นฐาน อาทิ ท่อ คอนกรีต บ่อพัก คอนกรีต เสาเข็มเหลี่ยมตัน</p>
+                        <p>แผ่นพื้น ผนัง และ โครงสร้างสำเร็จรูป</p>
+                    </div>
+                </div>
+            </div>
 
-<!-- Modal Popup View ##################### -->
-<div class="modal fade" id="modal-view">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-        	<div class="modal-header" style="padding: 20px; border: 0;">
-        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 28px;padding: 10px 15px;background: #075176;color: #fff;border-radius: 50% 50%;">X</button>
-        	</div>
-            <div class="modal-body" style="padding: 0px;">
-                <div id='modal-content-view'>Loading..</div>
+            <div class="col-xs-12 col-lg-6">
+                <img src="img/bg-services.jpg">
             </div>
         </div>
     </div>
 </div>
-<!-- Modal Popup view ##################### -->
