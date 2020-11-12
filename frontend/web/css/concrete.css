@@ -1,0 +1,47 @@
+.box-left{
+	padding-right: 0px !important;
+}
+.box-right{
+	padding-left: 0px !important;
+}
+
+.concrete-block{
+	padding: 25px 0px;
+}
+.concrete-block-list{
+	background: #f5f5f5;
+	padding: 25px 0px;
+}
+.concrete-block-bg{
+	position: relative;
+	background-image: url(../img/product_bg.jpg);
+	background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.concrete-block-bg-text{
+  	position: absolute;
+    right: 0;
+}
+.concrete-post .concrete-block .concrete-block-content{
+	padding: 15px 0px;
+}
+.concrete-post .concrete-block .concrete-block-banner-footer{
+	padding: 15px 0px;
+	text-align: right;
+    width: 70%;
+    float: right;
+}
+.concrete-post .concrete-block-list .concrete-box .concrete-image{
+	box-shadow: 0px 0px 5px #bfbfbf;
+}
+.concrete-post .concrete-block-list .concrete-box .concrete-title{
+	padding: 10px 0px 25px 0px;
+}
+.concrete-post .concrete-block-list .concrete-box .concrete-title:before{
+	position: absolute;
+	content: "";
+	height: 5px;
+	width: 60px;
+	margin-top: -10px;
+	background-color: #e10000;
+}
