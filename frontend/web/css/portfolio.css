@@ -1,0 +1,106 @@
+.box-left{
+	padding-right: 0px !important;
+}
+.box-right{
+	padding-left: 0px !important;
+}
+
+.portfolio-posts .portfolio-block{
+	padding: 60px 0px 20px 0px;
+	background: #ebebeb;
+}
+.portfolio-posts .portfolio-block .portfolio-header{
+	margin-top: 20px;
+	padding: 20px 0px;
+	font-size: 18px;
+	text-align: center;
+}
+.portfolio-posts .portfolio-block .row{
+	margin-bottom: 20px;
+}
+.portfolio-posts .portfolio-block .portfolio-box .portfolio-title{
+	font-size: 14px;
+    text-align: left;
+    padding: 15px 0px;
+}
+.portfolio-posts .portfolio-block .portfolio-box .portfolio-detail{
+	padding-bottom: 40px;
+	padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+	.portfolio-posts .portfolio-block .row{
+		margin-bottom: 0px;
+	}
+	.portfolio-posts .portfolio-block .portfolio-box{
+		margin-bottom: 20px;
+	}
+}
+
+/* -------------------------------- */
+/* property */
+/* -------------------------------- */
+.portfolio-posts .portfolio-property-list .portfolio-header{
+	margin-top: 20px;
+	padding: 30px 0px;
+	text-align: center;
+}
+.portfolio-posts .portfolio-property-list .portfolio-header h1{
+	font-size: 46px;
+	letter-spacing: 2px;
+	color: #e10000;
+	margin-bottom: 0px;
+}
+.portfolio-posts .portfolio-property-list .portfolio-header h3{
+	font-size: 26px;
+}
+
+/* -------------------------------- */
+/* project */
+/* -------------------------------- */
+.portfolio-posts .portfolio-project-list .portfolio-header{
+	margin-top: 20px;
+	padding: 30px 0px;
+	text-align: center;
+}
+.portfolio-posts .portfolio-project-list .portfolio-header h1{
+	font-size: 46px;
+	letter-spacing: 2px;
+	color: #e10000;
+	margin-bottom: 0px;
+}
+.portfolio-posts .portfolio-project-list .portfolio-header h3{
+	font-size: 26px;
+}
+.portfolio-posts .portfolio-project-list .owl-carousel{
+	padding-bottom: 30px;
+}
+.portfolio-posts .portfolio-project-list .owl-carousel .entry-media{
+	width: 100%;
+	margin: 0;
+}
+.portfolio-posts .portfolio-project-list .owl-carousel .entry-media a{
+	width: 300px;
+	height: 80px;
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.portfolio-posts .portfolio-project-list .owl-carousel .entry-media a.active{
+	background: #e10000;
+    color: #fff;
+}
+.portfolio-posts .portfolio-project-list .owl-carousel .owl-stage-outer{
+	margin: 0px;
+	padding: 0px;
+}
+
+.portfolio-vdeo{
+	background: linear-gradient(180deg, #fff 50%, #e10000 50%);
+}
+.portfolio-posts .portfolio-vdeo .owl-carousel .owl-stage-outer{
+	margin: 0px;
+	padding: 0px;
+}
