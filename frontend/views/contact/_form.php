@@ -14,7 +14,6 @@ use yii\bootstrap\ActiveForm;
   ],
 ]);
 ?>
-
 <div class="form-group-sm row">
   <div class="col-sm-6">
     <?= $form->field($ContactForm, 'contact_form_first_name')->textInput(['placeholder'=>Yii::$app->translated->get(42)])?>
@@ -29,6 +28,14 @@ use yii\bootstrap\ActiveForm;
   </div>
   <div class="col-sm-6">
     <?= $form->field($ContactForm, 'contact_form_email')->textInput(['placeholder'=>Yii::$app->translated->get(39)])?>
+  </div>
+</div>
+<div class="form-group-sm row">
+  <div class="col-sm-6">
+    <?= $form->field($ContactForm, 'contact_form_company')->textInput(['placeholder'=> Yii::$app->translated->get(38)])?>
+  </div>
+  <div class="col-sm-6">
+    <?= $form->field($ContactForm, 'contact_form_location')->textInput(['placeholder'=>Yii::$app->translated->get(39)])?>
   </div>
 </div>
 <div class="form-group-sm row">
