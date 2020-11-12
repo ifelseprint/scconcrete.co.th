@@ -66,6 +66,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+.red{
+    color: #e10000 !important;
+}
 .bg-light {
     background-color: #f8f8f8 !important;
 }
@@ -1678,7 +1681,7 @@ blockquote.text-white cite span {
 }
 .menu ul,
 .menu .megamenu {
-    margin-top: 1px;
+    margin-top: 0px;
 }
 .menu ul:before,
 .menu .megamenu:before {
@@ -1706,12 +1709,9 @@ blockquote.text-white cite span {
     line-height: 1.5;
 }
 .menu li > a {
-    color: #999999;
+    color: #fff;
     letter-spacing: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
+    padding: 10px 12px;
 }
 .menu li > a span:not(.tip) {
     position: relative;
@@ -1736,7 +1736,7 @@ blockquote.text-white cite span {
     font-family: "molla";
     content: "\f110";
     position: absolute;
-    right: 0;
+    right: 3px;
     top: 50%;
     display: block;
     font-size: 1rem;
@@ -1752,12 +1752,12 @@ blockquote.text-white cite span {
 }
 .menu .megamenu,
 .menu ul {
-    background-color: #fff;
+    background-color: #444;
     box-shadow: 5px 10px 16px rgba(51, 51, 51, 0.05), -5px 10px 16px rgba(51, 51, 51, 0.05);
 }
 .menu ul {
     min-width: 350px;
-    padding: 1.6rem 0 2rem;
+    /*padding: 1.6rem 0 2rem;*/
 }
 .menu .megamenu .banner > a {
     display: block;
@@ -4717,6 +4717,7 @@ p {
     width: 100%;
     font-weight: 400;
     font-size: 13px;
+    border-top: 4px solid #e92336;
 }
 .footer a {
     color: inherit;
