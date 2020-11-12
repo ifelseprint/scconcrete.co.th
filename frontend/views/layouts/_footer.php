@@ -8,7 +8,7 @@ use frontend\widgets\ProductFooter;
             <div class="row">
                 <div class="col-sm-2 col-lg-3">
                     <div style="padding: 30px; text-align: center;">
-                        <img src="img/logo.png" width="150" style="display: inline;">
+                        <img src="<?=Url::base(true);?>/img/logo.png" width="150" style="display: inline;">
                     </div>
                 </div><!-- End .col-sm-3 col-lg-2 -->
                 <style type="text/css">

@@ -20,29 +20,37 @@ use frontend\widgets\ProductMenu;
             <div class="header-center">
                 <nav class="main-nav">
                     <ul class="menu sf-arrows">
-                        <li class="">
-                            <a href="">หน้าแรก</a>
+                        <li class="<?php echo (Yii::$app->controller->id=="home" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>"><?= Yii::t('app', 'menu_home');?></a>
+                        </li>
+                        <li class="<?php echo (Yii::$app->controller->id=="about" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_about');?>"><?= Yii::t('app', 'menu_about');?></a>
+                        </li>
+                        <li class="<?php echo (Yii::$app->controller->id=="precast" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_precast');?>"><?= Yii::t('app', 'menu_precast');?></a>
+                        </li>
+                        <li class="<?php echo (Yii::$app->controller->id=="concrete" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_concrete');?>"><?= Yii::t('app', 'menu_concrete');?></a>
+                        </li>
+                        <li class="<?php echo (Yii::$app->controller->id=="portfolio" ? 'active' : '' )?>">
+                            <a href="#"><?= Yii::t('app', 'menu_portfolio');?></a>
+                            <ul>
+                                <li class="<?php echo (Yii::$app->controller->action->id=="property" ? 'active' : '' )?>">
+                                    <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_portfolio');?>/<?= Yii::t('app', 'menu_property');?>"><?= Yii::t('app', 'menu_property');?></a>
+                                </li>
+                                <li class="<?php echo (Yii::$app->controller->action->id=="project" ? 'active' : '' )?>">
+                                    <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_portfolio');?>/<?= Yii::t('app', 'menu_project');?>"><?= Yii::t('app', 'menu_project');?></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="<?php echo (Yii::$app->controller->id=="news" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_news');?>"><?= Yii::t('app', 'menu_news');?></a>
                         </li>
                         <li class="">
-                            <a href="">รู้จักเรา</a>
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_join_us');?>"><?= Yii::t('app', 'menu_join_us');?></a>
                         </li>
-                        <li class="">
-                            <a href="">คอนกรีตอัดแรงสำเร็จรูป</a>
-                        </li>
-                        <li class="">
-                            <a href="">คอนกรีตผสมเสร็จ</a>
-                        </li>
-                        <li class="">
-                            <a href="">ผลงานที่ผ่านมา</a>
-                        </li>
-                        <li class="">
-                            <a href="">กิจกรรมและข่าวสาร</a>
-                        </li>
-                        <li class="">
-                            <a href="">ร่วมงานกับเรา</a>
-                        </li>
-                        <li class="">
-                            <a href="">ติดต่อเรา</a>
+                        <li class="<?php echo (Yii::$app->controller->id=="contact" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_contact_us');?>"><?= Yii::t('app', 'menu_contact_us');?></a>
                         </li>
                         <li class="telephone"><a href="#" style="letter-spacing: 2px;">Tel . 038-029888</a></li>
                     </ul><!-- End .menu -->

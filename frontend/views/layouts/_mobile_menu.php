@@ -19,16 +19,13 @@ use frontend\widgets\ProductMenu;
             <li class="nav-item">
                 <a class="nav-link active" id="mobile-menu-link" data-toggle="tab" href="#mobile-menu-tab" role="tab" aria-controls="mobile-menu-tab" aria-selected="true"><?=Yii::$app->translated->get(15);?></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false"><?= Yii::t('app', 'menu_product');?></a>
-            </li>
         </ul>
 
         <div class="tab-content">
             <div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
                 <nav class="mobile-nav">
                     <ul class="mobile-menu">
-                        <li>
+                        <!-- <li>
                             <a href="<?=Url::base(true);?>"><?= Yii::t('app', 'menu_home');?></a>
                         </li>
                         <li >
@@ -49,16 +46,9 @@ use frontend\widgets\ProductMenu;
                         </li>
                         <li>
                             <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_contact_us');?>"><?= Yii::t('app', 'menu_contact_us');?></a>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav><!-- End .mobile-nav -->
-            </div><!-- .End .tab-pane -->
-            <div class="tab-pane fade" id="mobile-cats-tab" role="tabpanel" aria-labelledby="mobile-cats-link">
-                <nav class="mobile-cats-nav">
-                    <ul class="mobile-cats-menu">
-                        <?= ProductMenu::widget(array('action'=>'link-list-icon')); ?>
-                    </ul><!-- End .mobile-cats-menu -->
-                </nav><!-- End .mobile-cats-nav -->
             </div><!-- .End .tab-pane -->
 
         </div><!-- End .tab-content -->
