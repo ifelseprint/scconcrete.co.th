@@ -32,10 +32,10 @@ use yii\bootstrap\ActiveForm;
 </div>
 <div class="form-group-sm row">
   <div class="col-sm-6">
-    <?= $form->field($ContactForm, 'contact_form_company')->textInput(['placeholder'=> Yii::$app->translated->get(38)])?>
+    <?= $form->field($ContactForm, 'contact_form_company')->textInput(['placeholder'=> Yii::$app->translated->get(46)])?>
   </div>
   <div class="col-sm-6">
-    <?= $form->field($ContactForm, 'contact_form_location')->textInput(['placeholder'=>Yii::$app->translated->get(39)])?>
+    <?= $form->field($ContactForm, 'contact_form_location')->textInput(['placeholder'=>Yii::$app->translated->get(47)])?>
   </div>
 </div>
 <div class="form-group-sm row">
