@@ -8,74 +8,75 @@ JoinAsset::register($this);
 	<div class="join-posts">
 		<div class="container">
 			<?= $this->render('_banner', ['Banner'=> $Banner]); ?>
+			<div class="row" style="padding: 35px 0px;">
+				<div class="col-xs-12 col-lg-6" style="text-align: left;">
+					<img src="<?=Url::base(true);?>/img/join_us.png" width="300" style="display: inline-block;">
+				</div>
+				<div class="col-xs-12 col-lg-6" style="text-align: right;">
+					<img src="<?=Url::base(true);?>/img/join_us2.png" width="300" style="display: inline-block;">
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-xs-12 col-lg-4 box-left">
 					<div class="join-content">
 						<div class="join-content-box">
-							<div class="join-title-header"><span class="text-header"><?=Yii::$app->translated->get(33);?></span></div>
-							<div class="join-title-detail">
-								<?=Yii::$app->translated->get(34);?>
-								 <span class="text-header">Apply now</span>
+							<div class="join-title-header">
+								<span class="text-header">ตำแหน่งงาน</span>
+							</div>
+							<div class="join-apply">
+								<ul>
+									<li><a href="#">QC</a></li>
+									<li><a href="#" class="active">วิศวกรโยธา</a></li>
+									<li><a href="#">ตำแหน่งอื่นๆ</a></li>
+								</ul>
+							</div>
+							<hr>
+							<div class="join-title-contact">
+								<span class="text-header">ติดต่อฝ่ายบุคคล</span>
+								<div>บริษัท ซุน คอนสตรัคชั่น แอนด์ เอ็นจิเนียริ่ง จำกัด</div>
+								<div>ที่อยู่ 8899 หมู่ 4 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง</div>
 							</div>
 						</div>
-						<hr>
-						<div class="join-content-box">
-							<div class="join-title-header"><span class="text-header"><?=Yii::$app->translated->get(35);?></span></div>
-							<div class="join-title-detail">
-								<?=Yii::$app->translated->get(36);?>
-							</div>
-						</div>
-						<hr>
-						<div class="join-content-box">
-							<div class="join-title-header"><span class="text-header"><?=Yii::$app->translated->get(37);?></span></div>
-							<div class="join-title-detail">
-								<?=Yii::$app->translated->get(40);?>
-							</div>
-						</div>
-						<hr>
-						<div class="join-content-box">
-							<div><span class="text-header"><?=Yii::$app->translated->get(38);?> :</span> 081-8391818</div>
-							<div><span class="text-header"><?=Yii::$app->translated->get(39);?> :</span> hr@wehomemart.com</div>
-						</div>
-
 					</div>
 				</div>
 				<div class="col-xs-12 col-lg-8 box-right">
-					<!--Accordion wrapper-->
-					<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-						<?php
-						foreach ($Jobs as $value){
-							$jobs_name = 'jobs_name_'.Yii::$app->language;
-							$jobs_content = 'jobs_content_'.Yii::$app->language;	
-						?>
-						<!-- Accordion card -->
-						<div class="card">
-							<!-- Card header -->
-							<div class="card-header" role="tab" id="heading<?=$value->jobs_id;?>">
-								<a data-toggle="collapse" data-parent="#accordionEx" href="#collapse<?=$value->jobs_id;?>" aria-expanded="false" aria-controls="collapse<?=$value->jobs_id;?>">
-									<h5 >
-										<?=$value->$jobs_name;?> <i class="fa fa-angle-down" aria-hidden="true"></i>
-									</h5>
-								</a>
-							</div>
-							<!-- Card body -->
-							<div id="collapse<?=$value->jobs_id;?>" class="collapse" role="tabpanel" aria-labelledby="heading<?=$value->jobs_id;?>"
-							data-parent="#accordionEx">
-								<div class="card-body">
-									<div style="padding: 15px 0px;">
-										<?=$value->$jobs_content;?>
-									</div>
-									<div style="padding: 15px 0px;">
-										<a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_join_us');?>/<?=$value->$jobs_name;?>-<?=$value->jobs_id;?>" class="btnApply">Apply now</a>
-									</div>
-								</div>
-							</div>
+					<div class="join-description">
+						<p>
+							<b>คุณสมบัติทั่วไป</b><br>
+							- อายุ 18-35 ปี<br>
+							- จบปริญญาตรี สาขาใดก็ได้<br>
+							- มีความขยัน อดทน ตั้งใจทำงาน รักงานบริการ<br>
+							- มีมนุษยสัมพันธ์ดี<br>
+							- มีประสบการณ์ ธุรกิจค้าปลีก จะพิจารณาเป็นพิเศษ<br><br>
+							<b>สวัสดิการ และรายได้</b><br>
+							- ค่าครองชีพ<br>
+							- กองทุนสำรองเลี้ยงชีพ<br>
+							- ค่ารักษาพยาบาล<br>
+							- ตรวจสุขภาพประจำปี<br>
+							- ค่านั่งเครื่องแคชเชียร์<br>
+							- เงินรางวัลจากยอดขาย (Incentive)<br>
+							- วันลาพิเศษ<br>
+							- เงินช่วยเหลือต่างๆ<br>
+							- ค่าครองชีพ<br>
+							- กองทุนสำรองเลี้ยงชีพ<br>
+							- ค่ารักษาพยาบาล<br>
+							- ตรวจสุขภาพประจำปี<br>
+							- ค่านั่งเครื่องแคชเชียร์<br>
+							- เงินรางวัลจากยอดขาย (Incentive)<br>
+							- วันลาพิเศษ<br>
+							- เงินช่วยเหลือต่างๆ<br>
+							ส่งใบสมัครด้วยตัวเองมาที่ อีเมล hr@wehomemart.com<br>
+						</p>
+						<hr>
+						<div style="text-align: center;">
+							<a href="#" class="btn-join">สมัครงาน</a>
 						</div>
-						<!-- Accordion card -->
-						<?php } ?>
-						
 					</div>
-					<!-- Accordion wrapper -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<img src="<?=Url::base(true);?>/img/banner_footer_jobs.jpg" width="100%">
 				</div>
 			</div>
 		</div>

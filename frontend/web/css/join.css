@@ -1,82 +1,76 @@
-/*.box-left{
+.box-left{
 	padding-right: 0px !important;
 }
 .box-right{
 	padding-left: 0px !important;
-}*/
+}
 .text-header{
 	font-weight: 500;
 }
-
+.join-posts{
+  background: #f5f5f5;
+}
 .join-posts .join-banner{
 	padding: 15px 0px;
 }
 .join-posts .join-content{
-	padding: 20px;
-    background: #075176;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 200;
-    margin-bottom: 20px;
+  background: #ed1c24;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 20px;
 }
 .join-posts .join-content hr {
-    width: 55px;
-    margin: 15px 0px;
+  margin: 15px 0px;
 }
 .join-posts .join-content .join-content-box{
 	padding-bottom: 10px;
 }
+.join-posts .join-content .join-content-box .join-apply a{
+  display: block;
+  padding: 10px;
+  margin-left: 15px;
+  color: #fff;
+}
+.join-posts .join-content .join-content-box .join-apply a.active{
+  color: #000 !important;
+  background: #fff !important;
+}
+/*.join-posts .join-content .join-content-box .join-apply a.active:after{
+  position: absolute;
+  content: "";
+  height: 44px;
+  width: 100%;
+  left: 10px;
+  background-color: #fff;
+}
+*/
 .join-posts .join-content .join-content-box .join-title-header{
-	padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
 }
-.card {
-    /*border-top: 0 !important;*/
-    padding: 2px 0px;
-    border: 0 !important;
+.join-posts .join-content .join-content-box .join-title-contact{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
-.card hr{
-	margin: 10px 0px !important;
-}
+.join-posts .join-description{
 
-.card h5{
-	padding: 15px;
-	font-size: 18px;
-	margin-bottom: 0px;
-	border: 0.5px solid #075176 !important;
-}
-.card a[aria-expanded="true"] h5{
-	color: #fff;
-    background: #075176;
-}
-.card a[aria-expanded="false"] h5{
-    color: #000;
-    background: #fff;
-}
+  background: #fff;
+  padding: 30px;
 
-.card .card-header i{
-	float: right;
-	background: #075176;
-    color: #fff;
-    padding: 2px 5px;
 }
-.card a[aria-expanded="true"] h5 i {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  transform: rotate(-180deg);
+.join-posts .join-description hr{
+  border-top: 2px solid #e10000;
 }
-.card .card-body p{
-	padding-bottom: 5px;
+.join-posts .join-description .btn-join{
+  padding: 10px 25px;
+  background: #e10000;
+  color: #fff;
 }
-.card .card-body .btnApply{
-	background: #e92336;
-    padding: 10px 25px;
-    color: #fff;
-}
-
 .form-group {
-    margin-bottom: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 form span.require{
