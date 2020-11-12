@@ -12,6 +12,8 @@ use Yii;
  * @property string $contact_form_last_name
  * @property string $contact_form_tel
  * @property string $contact_form_email
+ * @property string $contact_form_company
+ * @property string $contact_form_location
  * @property string|null $contact_form_message
  * @property string $created_date
  */
@@ -31,11 +33,12 @@ class ContactForm extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['contact_form_first_name', 'contact_form_last_name', 'contact_form_tel', 'contact_form_email', 'created_date'], 'required'],
-            [['contact_form_message'], 'string'],
+            [['contact_form_first_name', 'contact_form_last_name', 'contact_form_tel', 'contact_form_email', 'contact_form_company', 'contact_form_location', 'created_date'], 'required'],
+            [['contact_form_location', 'contact_form_message'], 'string'],
             [['created_date'], 'safe'],
             [['contact_form_first_name', 'contact_form_last_name', 'contact_form_email'], 'string', 'max' => 100],
             [['contact_form_tel'], 'string', 'max' => 20],
+            [['contact_form_company'], 'string', 'max' => 200],
         ];
     }
 
@@ -50,6 +53,8 @@ class ContactForm extends \yii\db\ActiveRecord
             'contact_form_last_name' => 'Contact Form Last Name',
             'contact_form_tel' => 'Contact Form Tel',
             'contact_form_email' => 'Contact Form Email',
+            'contact_form_company' => 'Contact Form Company',
+            'contact_form_location' => 'Contact Form Location',
             'contact_form_message' => 'Contact Form Message',
             'created_date' => 'Created Date',
         ];
