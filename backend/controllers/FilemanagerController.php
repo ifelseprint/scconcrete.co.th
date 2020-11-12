@@ -26,9 +26,9 @@ class FilemanagerController extends \yii\web\Controller
     public function actionConfig()
     {
         if(YII_ENV=="prod"){
-            $document_base_url = "/project/wehomemart.com/web/uploads/";
+            $document_base_url = "/project/scconcrete.co.th/web/uploads/";
         }else{
-            $document_base_url = "/project/wehomemart.com/web/uploads/";
+            $document_base_url = "/scconcrete.co.th/web/uploads/";
         }
 
         echo json_encode(array('document_base_url' => $document_base_url));
