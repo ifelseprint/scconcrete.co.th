@@ -5,11 +5,12 @@
 	padding-left: 0px !important;
 }
 
-.about-posts .about-block .about-content{
-	background: #fff;
-}
 .about-posts .about-block .about-content .content-box{
-	padding: 10px; 
+	padding: 60px; 
+}
+.about-posts .about-block .about-content .content-box h1{
+	font-size: 22px;
+    margin-bottom: 0;
 }
 .about-posts .about-block .about-content .content-box hr{
 	border-top: 3px solid #075176;
@@ -21,18 +22,43 @@
 	color: #e92336;
 }
 .about-posts .about-block .about-content .content-box .content-header{
-	font-size: 42px;
-	color: #075176;
+	font-size: 20px;
+    color: #212529;
+    border: 3px solid #e10000;
+    padding: 5px 15px;
 }
 .about-posts .about-block .about-content .content-box .content-title{
 	color: #075176;
 	font-size: 24px;
 }
-.about-posts .about-block .about-content .content-box .content-text,
-.about-posts .mission-block .content-box .content-text
-{
-	font-size: 12px;
-    font-weight: 300;
+.about-posts .about-block.section1 .about-content .content-box .content-text{
+	padding: 5px 15px;
+}
+.about-posts .about-block.section4 .header-text{
+	font-size: 24px;
+}
+.owl-carousel .entry-media{
+	padding: 20px;
+	background: #fff;
+	border: 2px solid #e10000;
+    border-radius: 5px;
+}
+.owl-carousel .entry-media .desc{
+	text-align: center;
+	font-size: 9px;
+    color: #000;
+}
+.owl-carousel .entry-media img{
+	padding: 20px 0px;
+	width: 150px !important;
+    margin: auto !important;
+}
+.border-line{
+	border-bottom: 2px solid #e10000;
+}
+.content-text{
+	/*font-size: 12px !important;*/
+    /*font-weight: 300 !important;*/
 }
 .about-posts .mission-block {
 	background: #192028;

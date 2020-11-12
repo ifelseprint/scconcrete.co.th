@@ -6,139 +6,185 @@ AboutAsset::register($this);
 ?>
 <main class="main">
 	<div class="about-posts">
-        <?= $this->render('_banner', ['Banner'=> $Banner]); ?>
-        <div class="about-block">
-        	<div class="container">
-	    		<div class="row">
-	    			<div class="col-lg-5 box-left">
-	        			<img src="<?=Url::base(true);?>/img/about.jpg">
-	        		</div>
-	        		<div class="col-lg-7 box-right">
-	    				<div class="about-content">
-	    					<div class="row">
-		        				<div class="col-lg-12">
-		        					<div class="content-box">
-		        						<div class="content-about"><?=Yii::$app->translated->get(14);?></div>
-		        						<div class="content-header"><?=Yii::$app->translated->get(16);?></div>
-		        						<div class="content-text"><?=Yii::$app->translated->get(17);?></div>
-		        						<div style="padding-top: 15px;">
-		        							<span style="padding: 5px 12px;background: #075176;color: #fff;border-radius: 5px;">VISION</span>
-		        							<?=Yii::$app->translated->get(18);?>
-		        						</div>
-		        					</div>
-		        				</div>
-		        			</div>
-	    					<div class="row">
-		        				<div class="col-lg-4">
-		        					<div class="content-box">
-		        						<div class="content-icon">
-		        							<img src="<?=Url::base(true);?>/img/vision1.jpg" width="30">
-		        						</div>
-		        						<div class="content-title">WE SMILE</div>
-		        						<div class="content-text"><?=Yii::$app->translated->get(19);?></div>
-		        						<hr>
-		        						<div class="content-text"><?=Yii::$app->translated->get(20);?></div>
-		        					</div>
-		        				</div>
-		        				<div class="col-lg-4">
-		        					<div class="content-box">
-		        						<div class="content-icon">
-		        							<img src="<?=Url::base(true);?>/img/vision2.jpg" width="30">
-		        						</div>
-		        						<div class="content-title">WE SERVICE</div>
-		        						<div class="content-text"><?=Yii::$app->translated->get(21);?></div>
-		        						<hr>
-		        						<div class="content-text"><?=Yii::$app->translated->get(22);?></div>
-		        					</div>
-		        				</div>
-		        				<div class="col-lg-4">
-		        					<div class="content-box">
-		        						<div class="content-icon">
-		        							<img src="<?=Url::base(true);?>/img/vision3.jpg" width="30">
-		        						</div>
-		        						<div class="content-title">WE CARE</div>
-		        						<div class="content-text"><?=Yii::$app->translated->get(23);?></div>
-		        						<hr>
-		        						<div class="content-text"><?=Yii::$app->translated->get(24);?></div>
-		        					</div>
-		        				</div>
-		        			</div>
-	        			</div>
-	        		</div>
-	        	</div>
-	        </div>
-        </div>
-        <div class="mission-block">
-        	<div class="container">
-	    		<div class="row">
-	    			<div class="col-lg-7">
-	    				<div style="padding: 30px 0px;">
-	    					<span style="padding: 5px 12px;background: #075176;color: #fff;border-radius: 5px;">MISSION</span>
-	    				</div>
-	    				<div class="row">
-	    					<div class="col-lg-6">
-	    						<div class="content-box">
-	    							<div class="title">High Quality</div>
-	    							<div class="row box">
-				    					<div class="col-lg-2">
-				    						<img src="<?=Url::base(true);?>/img/mission1.jpg" >
-				    					</div>
-				    					<div class="col-lg-10">
-				    						<div class="content-text"><?=Yii::$app->translated->get(25);?></div>
-				    					</div>
-				    				</div>
-		    					</div>
-	    					</div>
-	    					<div class="col-lg-6">
-	    						<div class="content-box">
-	    							<div class="title">Increase revenue</div>
-	    							<div class="row box">
-				    					<div class="col-lg-2">
-				    						<img src="<?=Url::base(true);?>/img/mission2.jpg" >
-				    					</div>
-				    					<div class="col-lg-10">
-				    						<div class="content-text"><?=Yii::$app->translated->get(26);?></div>
-				    					</div>
-				    				</div>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="row">
-	    					<div class="col-lg-6">
-	    						<div class="content-box">
-	    							<div class="title">Success Of Partner</div>
-	    							<div class="row box">
-				    					<div class="col-lg-2">
-				    						<img src="<?=Url::base(true);?>/img/mission3.jpg" >
-				    					</div>
-				    					<div class="col-lg-10">
-				    						<div class="content-text"><?=Yii::$app->translated->get(27);?></div>
-				    					</div>
-				    				</div>
-		    					</div>
-	    					</div>
-	    					<div class="col-lg-6">
-	    						<div class="content-box">
-	    							<div class="title">Owner Business Model</div>
-	    							<div class="row box">
-				    					<div class="col-lg-2">
-				    						<img src="<?=Url::base(true);?>/img/mission4.jpg" >
-				    					</div>
-				    					<div class="col-lg-10">
-				    						<div class="content-text"><?=Yii::$app->translated->get(28);?></div>
-				    					</div>
-				    				</div>
-		    					</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-lg-5">
-	    				<div>
-	    					<img src="<?=Url::base(true);?>/img/about2.jpg">
-	    				</div>
-	    			</div>
-	    		</div>
-	    	</div>
-        </div>
-    </div>
+		<?= $this->render('_banner', ['Banner'=> $Banner]); ?>
+		<div class="about-block section1" style="background: #fff">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 box-left">
+						<div style="padding: 60px;">
+							<img src="<?=Url::base(true);?>/img/about_quality_is_our_goal.jpg">
+						</div>
+					</div>
+					<div class="col-lg-6 box-right">
+						<div class="about-content">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="content-box">
+										<div class="content-header"><?=Yii::$app->translated->get(16);?></div>
+										<div class="content-text"><?=Yii::$app->translated->get(17);?></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-block section2" style="background: #efefef">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 box-left">
+						<div style="padding: 60px;">
+							<img src="<?=Url::base(true);?>/img/about2.jpg" style="border: 4px solid #fff;">
+						</div>
+					</div>
+					<div class="col-lg-6 box-right">
+						<div class="about-content">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="content-box">
+										<h1 class="red">SC PRECAST</h1>
+										<h1>SOLUTION</h1>
+										<br>
+										<div class="content-text">
+											<?=Yii::$app->translated->get(18);?>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-block section3" style="background: #fff">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 box-left">
+						<div class="about-content">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="content-box">
+										<div class="content-text">
+											<?=Yii::$app->translated->get(19);?>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 box-right">
+						<div style="padding: 60px;">
+							<img src="<?=Url::base(true);?>/img/about3.jpg" style="border: 4px solid #fff;">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-block section4" style="background: #efefef">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12" style="padding: 60px;">
+						<div class="header-text border-line">
+							<?=Yii::$app->translated->get(20);?></h1>
+						</div>
+						<div>
+							<div class="row">
+					            <div class="col-xs-12 col-lg-12">
+					                <div style="padding: 15px 0px;">
+					                  <div class="owl-carousel owl-simple carousel-with-shadow owl-loaded owl-drag" data-toggle="owl" data-owl-options='{
+					                    "nav": false, 
+					                    "dots": true,
+					                    "items": 4,
+					                    "margin": 20,
+					                    "loop": false,
+					                    "responsive": {
+					                        "0": {
+					                            "items":1
+					                        },
+					                        "600": {
+					                            "items":2
+					                        },
+					                        "992": {
+					                            "items":4
+					                        }
+					                    }
+					                    }'>
+					                      <div class="owl-stage-outer">
+					                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.4s ease 0s; width: 1188px;">
+					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
+					                            <article class="entry entry-display">
+					                              <figure class="entry-media">
+					                                <a href="#">
+					                                  	<img src="<?=Url::base(true);?>/img/logo1.jpg" alt="image desc" >
+					                                  	<div class="desc">
+					                                  		<div>บริษัท ซุน คอนสตรัคชั่น แอนด์ เอ็นจิเนียริ่ง จำกัด</div>
+															<div>SUEN CONSTRUCTION AND ENGINEERING CO.,LTD</div>
+														</div>
+					                                </a>
+					                              </figure><!-- End .entry-media -->
+					                            </article>
+					                          </div>
+					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
+					                            <article class="entry entry-display">
+					                              <figure class="entry-media">
+					                                <a href="#">
+					                                  	<img src="<?=Url::base(true);?>/img/logo1.jpg" alt="image desc">
+					                                  	<div class="desc">
+					                                  		<div>บริษัท ซุน เจนเนอรัล แอนด์ เอ็นจิเนียริ่ง จำกัด</div>
+															<div>SUEN GENERAL AND ENGINEERING CO.,LTD</div>
+														</div>
+					                                </a>
+					                              </figure><!-- End .entry-media -->
+					                            </article>
+					                          </div>
+					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
+					                            <article class="entry entry-display">
+					                              <figure class="entry-media">
+					                                <a href="#">
+					                                  	<img src="<?=Url::base(true);?>/img/logo3.jpg" alt="image desc">
+					                                  	<div class="desc">
+					                                  		<div>บริษัท เอสซี เรียลเอสเตท ดีเวลลอปเม้นท์ จำกัด</div>
+															<div>SC REAL ESTATE DEVELOPMENT CO.,LTD</div>
+														</div>
+					                                </a>
+					                              </figure><!-- End .entry-media -->
+					                            </article>
+					                          </div>
+					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
+					                            <article class="entry entry-display">
+					                              <figure class="entry-media">
+					                                <a href="#">
+					                                  	<img src="<?=Url::base(true);?>/img/logo4.jpg" alt="image desc">
+					                                  	<div class="desc">
+					                                  		<div>บริษัท เอสซี เฮ้าส์ซิ่ง ดีเวลลอปเม้นท์ จำกัด</div>
+															<div>SC HOUSING DEVELOPMENT CO.,LTD</div>
+														</div>
+					                                </a>
+					                              </figure><!-- End .entry-media -->
+					                            </article>
+					                          </div>
+					                        </div>
+					                      </div>
+					                      <div class="owl-nav disabled">
+					                        <button type="button" role="presentation" class="owl-prev">
+					                          <i class="icon-angle-left"></i>
+					                        </button>
+					                        <button type="button" role="presentation" class="owl-next">
+					                          <i class="icon-angle-right"></i>
+					                        </button>
+					                      </div>
+					                      <div class="owl-dots disabled">
+					                        <button role="button" class="owl-dot active"><span></span></button>
+					                      </div>
+					                  </div><!-- End .owl-carousel -->
+					                </div>
+					            </div>
+					        </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </main>
