@@ -43,6 +43,8 @@ a {
 .select2-container {
     display: inline-block !important;
 }
+
+.pace .pace-progress {background: #f00;}
 /* =================== Loader ======================== */
 #loader {
   position: absolute;
