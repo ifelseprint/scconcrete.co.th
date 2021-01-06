@@ -38,50 +38,29 @@ ConcreteAsset::register($this);
        		<div class="container">
 	        	<?php
 				//Columns must be a factor of 12 (1,2,3,4,6,12)
-				// $numOfCols = 3;
-				// $rowCount = 0;
-				// $bootstrapColWidth = 12 / $numOfCols;
+				$numOfCols = 3;
+				$rowCount = 0;
+				$bootstrapColWidth = 12 / $numOfCols;
 				?>
 				<div class="row">
 				<?php
-				// foreach ($concrete as $value){
-				// 	$concrete_name = 'concrete_name_'.Yii::$app->language;
-				// 	$concrete_content = 'concrete_content_'.Yii::$app->language;
+				foreach ($product as $value){
+					$product_name = 'product_name_'.Yii::$app->language;
 				?>  
 			        <div class="col-md-4">
 	    				<div class="concrete-box">
 		    				<div class="concrete-image">
-		    					<img src="<?=Url::base(true);?>/img/concrete1.jpg" width="100%">
+		    					<img src="<?=Url::base(true);?>/uploads/<?=$value['product_image_path'];?>/<?=$value['product_image'];?>" width="100%">
 							</div>
 		    				<div class="concrete-title">
-		    					หิน
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="concrete-box">
-		    				<div class="concrete-image">
-		    					<img src="<?=Url::base(true);?>/img/concrete2.jpg" width="100%">
-							</div>
-		    				<div class="concrete-title">
-		    					ทราย
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="concrete-box">
-		    				<div class="concrete-image">
-		    					<img src="<?=Url::base(true);?>/img/concrete3.jpg" width="100%">
-							</div>
-		    				<div class="concrete-title">
-		    					คอนกรีตผสมเสร็จ
+		    					<?=$value['product_name_th'];?>
 		    				</div>
 		    			</div>
 			        </div>
 				<?php
-				//     $rowCount++;
-				//     if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
-				// }
+				    $rowCount++;
+				    if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
+				}
 				?>
 				</div>
 
