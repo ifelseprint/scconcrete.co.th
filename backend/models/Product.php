@@ -24,10 +24,16 @@ class Product extends \common\models\Product
             [['pageSize'], 'integer'],
         ]);
     }
+    public function getProductCategory()
+    {
+        return $this->hasOne(\common\models\ProductCategory::className(), ['id' => 'product_category']);
+    }
     public function search($params)
     {
 
         $query = Product::find();
+        $query->joinWith(['productCategory']);
+
         $dataProvider = new ActiveDataProvider([
             'pagination' => [
                 'pageSize' => $this->pageSize,
@@ -36,6 +42,11 @@ class Product extends \common\models\Product
             'sort'=> ['defaultOrder' => ['product_id' => SORT_DESC]]
         ]);
 
+        $dataProvider->sort->attributes['productCategory'] = [
+            'asc' => ['product_category.product_category_name_th' => SORT_ASC],
+            'desc' => ['product_category.product_category_name_th' => SORT_DESC],
+        ];
+        
         if (!($this->load($params))) {
             return $dataProvider;
         }
