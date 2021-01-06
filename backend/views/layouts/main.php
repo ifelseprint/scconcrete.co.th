@@ -19,16 +19,16 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="hold-transition layout-top-nav">
+<body class="hold-transition layout-top-nav pace-blue">
 <?php $this->beginBody() ?>
 
 <div class="wrapper">
     <!-- Navbar -->
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <a href="<?=Url::base(true);?>/dashboard" class="navbar-brand">
+      <!-- <a href="<?=Url::base(true);?>/dashboard" class="navbar-brand">
         <img src="<?=Url::base(true);?>/img/logo.png" alt="" class="brand-image">
-      </a>
+      </a> -->
       
       <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

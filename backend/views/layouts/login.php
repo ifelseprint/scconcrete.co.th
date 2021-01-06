@@ -19,7 +19,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="hold-transition layout-top-nav">
+<body class="hold-transition layout-top-nav pace-blue">
 <?php $this->beginBody() ?>
 
     <?= $content ?>
