@@ -38,81 +38,29 @@ PrecastAsset::register($this);
        		<div class="container">
 	        	<?php
 				//Columns must be a factor of 12 (1,2,3,4,6,12)
-				// $numOfCols = 3;
-				// $rowCount = 0;
-				// $bootstrapColWidth = 12 / $numOfCols;
+				$numOfCols = 3;
+				$rowCount = 0;
+				$bootstrapColWidth = 12 / $numOfCols;
 				?>
 				<div class="row">
 				<?php
-				// foreach ($precast as $value){
-				// 	$precast_name = 'precast_name_'.Yii::$app->language;
-				// 	$precast_content = 'precast_content_'.Yii::$app->language;
-				?>  
+				foreach ($product as $value){
+					$product_name = 'product_name_'.Yii::$app->language;
+				?> 
 			        <div class="col-md-4">
 	    				<div class="precast-box">
 		    				<div class="precast-image">
-		    					<img src="<?=Url::base(true);?>/img/precast1.jpg" width="100%">
+		    					<img src="<?=Url::base(true);?>/uploads/<?=$value['product_image_path'];?>/<?=$value['product_image'];?>" width="100%">
 							</div>
 		    				<div class="precast-title">
-		    					ท่อคอนกรีตสำเร็จรูป (ท่อกลม)
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="precast-box">
-		    				<div class="precast-image">
-		    					<img src="<?=Url::base(true);?>/img/precast2.jpg" width="100%">
-							</div>
-		    				<div class="precast-title">
-		    					ท่อคอนกรีตสำเร็จรูป (ท่อกลม)
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="precast-box">
-		    				<div class="precast-image">
-		    					<img src="<?=Url::base(true);?>/img/precast3.jpg" width="100%">
-							</div>
-		    				<div class="precast-title">
-		    					ท่อคอนกรีตสำเร็จรูป (ท่อกลม)
-		    				</div>
-		    			</div>
-			        </div>
-
-			        <div class="col-md-4">
-	    				<div class="precast-box">
-		    				<div class="precast-image">
-		    					<img src="<?=Url::base(true);?>/img/precast4.jpg" width="100%">
-							</div>
-		    				<div class="precast-title">
-		    					ท่อคอนกรีตสำเร็จรูป (ท่อกลม)
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="precast-box">
-		    				<div class="precast-image">
-		    					<img src="<?=Url::base(true);?>/img/precast5.jpg" width="100%">
-							</div>
-		    				<div class="precast-title">
-		    					ท่อคอนกรีตสำเร็จรูป (ท่อกลม)
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="precast-box">
-		    				<div class="precast-image">
-		    					<img src="<?=Url::base(true);?>/img/precast6.jpg" width="100%">
-							</div>
-		    				<div class="precast-title">
-		    					ท่อคอนกรีตสำเร็จรูป (ท่อกลม)
+		    					<?=$value['product_name_th'];?>
 		    				</div>
 		    			</div>
 			        </div>
 				<?php
-				//     $rowCount++;
-				//     if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
-				// }
+				    $rowCount++;
+				    if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
+				}
 				?>
 				</div>
 
