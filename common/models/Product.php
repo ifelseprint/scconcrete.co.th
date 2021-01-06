@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "product".
  *
  * @property int $product_id
+ * @property int|null $product_category
  * @property string|null $product_name_th
  * @property string|null $product_name_en
  * @property string|null $product_icon
@@ -46,7 +47,7 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['is_active', 'created_user', 'modified_user'], 'integer'],
+            [['product_category', 'is_active', 'created_user', 'modified_user'], 'integer'],
             [['created_date', 'modified_date'], 'safe'],
             [['meta_tag_title_th', 'meta_tag_title_en', 'meta_tag_description_th', 'meta_tag_description_en', 'meta_tag_keywords_th', 'meta_tag_keywords_en'], 'string'],
             [['product_name_th', 'product_name_en', 'product_icon_path', 'product_image_path', 'product_image_hover_path'], 'string', 'max' => 100],
@@ -61,6 +62,7 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             'product_id' => 'Product ID',
+            'product_category' => 'Product Category',
             'product_name_th' => 'Product Name Th',
             'product_name_en' => 'Product Name En',
             'product_icon' => 'Product Icon',
@@ -69,7 +71,7 @@ class Product extends \yii\db\ActiveRecord
             'product_image_path' => 'Product Image Path',
             'product_image_hover' => 'Product Image Hover',
             'product_image_hover_path' => 'Product Image Hover Path',
-            'is_active' => '0 = inactive, 1 = active',
+            'is_active' => 'Is Active',
             'created_user' => 'Created User',
             'created_date' => 'Created Date',
             'modified_user' => 'Modified User',
