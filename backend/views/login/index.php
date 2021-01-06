@@ -5,6 +5,9 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
+use backend\assets\AppAsset;
+use backend\assets\LoginAsset;
+AppAsset::register($this);
 ?>
 <?php Pjax::begin(['id' => 'pjax-grid','timeout' => 0,'enablePushState' => false,]); ?>
 <div id="loadingOverlay" class="loader-overlay" style="display: none;">
@@ -45,8 +48,11 @@ $script = <<<JS
     $("#pjax-grid").on("pjax:end", function() {
       $('#loadingOverlay').hide();
     });
+
+    appWebsite.Login._eventLogin();
   });
 JS;
 $this->registerJs($script);
+LoginAsset::register($this);
 ?>
 <?php Pjax::end(); ?>

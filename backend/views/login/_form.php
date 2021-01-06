@@ -5,45 +5,40 @@
 /* @var $model \common\models\LoginForm */
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use yii\widgets\ActiveForm;
 
 $this->title = 'Login';
 ?>
-<p class="login-box-msg">Sign in to start your session</p>
+<p class="login-box-msg">เข้าสู่ระบบการใช้งานเพื่อจัดการเนื้อหาและข้อมูลในเว็บไซต์</p>
+
 <?php $form = ActiveForm::begin([
   'method' => 'post',
-  'id' => 'form-login',
   'action' => ['login/index'],
-  'options' => ['enctype' => 'multipart/form-data','data-pjax' => true],
+  'options' => ['id' => 'formLogin', 'class' => 'form-horizontal' ],
+  'enableClientValidation' => true,
   'fieldConfig' => [
-    'template' => "{input} <div style='position: fixed;margin-top: 37px;color: #f00;'>{error}</div>",
-    'inputOptions' => ['class' => 'form-control'],
+    'template' => "{input} {error}",
+    'inputOptions' => ['class' => 'form-control form-control-sm'],
+    'options' => [
+      'data-pjax' => true,
+      'tag' => false,
+    ],
   ],
 ]);
 ?>
-<label class="col-form-label-sm">Username :</label>
-<div class="input-group mb-3">
-    <?= $form->field($model, 'login_username', ['options' => ['tag' => false]]); ?>
-    <div class="input-group-append">
-        <div class="input-group-text">
-            <span class="fas fa-user"></span>
-        </div>
-    </div>
+<label class="col-form-label-sm">ชื่อผู้ใช้งาน :</label>
+<div class="mb-3">
+  <?= $form->field($model, 'login_username')->textInput(['class' => 'form-control ','id'=>'login_usernam','required' => true,'data-msg' => 'คุณยังไม่ได้ระบุชื่อผู้ใช้งาน'])?>
 </div>
-<label class="col-form-label-sm">Password :</label>
-<div class="input-group mb-3">
-    <?= $form->field($model, 'login_password', ['options' => ['tag' => false]])->passwordInput(); ?>
-    <div class="input-group-append">
-        <div class="input-group-text">
-            <span class="fas fa-lock"></span>
-        </div>
-    </div>
+<label class="col-form-label-sm">รหัสผ่านผู้ใช้งาน :</label>
+<div class="mb-3">
+  <?= $form->field($model, 'login_password')->passwordInput(['class' => 'form-control','id'=>'login_password','required' => true,'data-msg' => 'คุณยังไม่ได้ระบุรหัสผ่านผู้ใช้งาน'])?>
 </div>
 <div class="row">
-    <div class="col-8"></div>
+    <div class="col-8" id="msg-error" style="color: #dc3545;font-size: 10px;"></div>
     <!-- /.col -->
     <div class="col-4">
-        <?= Html::submitButton('Login', ['class' => 'btn btn-primary btn-block', 'name' => 'login-button']) ?>
+      <?= Html::submitButton('Login', ['class' => 'btn btn-primary btn-block submit-login', 'name' => 'login-button']) ?>
     </div>
     <!-- /.col -->
 </div>

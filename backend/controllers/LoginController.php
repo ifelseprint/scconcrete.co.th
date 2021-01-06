@@ -22,8 +22,22 @@ class LoginController extends Controller
             ],
         ];
     }
+
     public function actionIndex()
     {
+
+        $this->layout = 'login';
+
+        /* set password */
+        // $user = new Users();
+        // $user->login_username = 'admin';
+        // $user->login_password =  $user->setPassword('SC@Concrete2020');
+        // $user->is_active = 1;
+        // $user->setPassword('SC@Concrete2020');
+        // print_r($user->login_password);
+        // exit;
+        
+        /* new user */
         // $user = new Users();
         // $user->login_username = 'admin';
         // $user->login_password =  $user->setPassword('1234');
@@ -33,22 +47,35 @@ class LoginController extends Controller
         // $user->generateEmailVerificationToken();
         // $user->save();
         // exit;
-        $this->layout = 'login';
+
+        // $session = Yii::$app->session;
+        // $session->destroy();
+        // Yii::$app->user->logout();
 
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+            return $this->redirect(Yii::$app->urlManager->createUrl(['dashboard']));
         }
 
-        $LoginForm = new LoginForm();
-        if ($LoginForm->load(Yii::$app->request->post()) && $LoginForm->login()) {
-            Yii::$app->response->redirect(['dashboard/index']);
-            // return $this->goBack();
-        } else {
-            $LoginForm->login_password = '';
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post())) {
 
-            return $this->render('index', [
-                'model' => $LoginForm,
-            ]);
+            if($model->login()){
+
+                return $this->redirect(Yii::$app->urlManager->createUrl(['dashboard']));
+
+            }else {
+                return json_encode([
+                    "status" => false,
+                    "result" => 'ชื่อผู้เข้าใช้งาน หรือ รหัสผ่านผู้เข้าใช้งาน ไม่ถูกต้อง.'
+                ]);
+            }
+
         }
+
+        $model->login_password = '';
+
+        return $this->render('index', [
+            'model' => $model,
+        ]);
     }
 }
