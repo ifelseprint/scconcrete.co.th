@@ -44,12 +44,6 @@ $url = $action=='create'? $action : $action.'/'.$Product['product_id'];
             </div>
           </div>
 
-          <div class="form-group-sm row">
-            <div class="col-sm-12">
-              <label class="col-form-label-sm">Product Description:</label>
-              <?= $form->field($ProductDetail, 'product_detail_content_th')->textArea(['class' => 'form-control form-control-sm editor']) ?>
-            </div>
-          </div>
           <hr>
           <div class="form-group-sm row">
             <div class="col-sm-12">
@@ -93,12 +87,6 @@ $url = $action=='create'? $action : $action.'/'.$Product['product_id'];
             </div>
           </div>
 
-          <div class="form-group-sm row">
-            <div class="col-sm-12">
-              <label class="col-form-label-sm">Product Description:</label>
-              <?= $form->field($ProductDetail, 'product_detail_content_en')->textArea(['class' => 'form-control form-control-sm editor']) ?>
-            </div>
-          </div>
           <hr>
           <div class="form-group-sm row">
             <div class="col-sm-12">
@@ -136,16 +124,17 @@ $url = $action=='create'? $action : $action.'/'.$Product['product_id'];
         </div>
         <!-- /.card-header -->
         <div class="card-body" style="display: block;">
-          <div class="form-group-sm row" style="padding-bottom: 15px;">
+          <div class="form-group-sm row">
             <div class="col-sm-4">
-              <table border="1" width="100%" cellpadding="10" style="border: 1px solid #ccc;">
+              <table border="1" width="100%" cellpadding="10"  style="border: 1px solid #ccc;">
                 <tr>
-                  <td width="100">
-                    <img src="../uploads/<?=$Product->product_icon_path?>/<?=$Product->product_icon?>" width="100" height="70">
-                  </td>
-                  <td>
-                    <label class="col-form-label-sm">Product icon:</label>
-                    <?= $form->field($Product, 'product_icon')->fileInput(['class' => 'form-control form-control-sm']); ?>
+                  <td colspan="2">
+                    <label class="col-form-label-sm">Product Category</label>
+                    <?php
+                    $dataCategory=['1'=>'คอนกรีตอัดแรงสำเร็จรูป','2'=>'คอนกรีตผสมเสร็จ'];
+                    ?>
+                    <?= $form->field($Product, 'product_category')->dropDownList($dataCategory,['class'=>'form-control form-control-sm select2']); ?>
+
                   </td>
                 </tr>
               </table>
@@ -159,34 +148,6 @@ $url = $action=='create'? $action : $action.'/'.$Product['product_id'];
                   <td>
                     <label class="col-form-label-sm">Product Image:</label>
                     <?= $form->field($Product, 'product_image')->fileInput(['class' => 'form-control form-control-sm']); ?>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="col-sm-4">
-              <table border="1" width="100%" cellpadding="10" style="border: 1px solid #ccc;">
-                <tr>
-                  <td width="100">
-                    <img src="../uploads/<?=$Product->product_image_hover_path?>/<?=$Product->product_image_hover?>" width="100" height="70">
-                  </td>
-                  <td>
-                    <label class="col-form-label-sm">Product Image (Hover):</label>
-                    <?= $form->field($Product, 'product_image_hover')->fileInput(['class' => 'form-control form-control-sm']); ?>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="form-group-sm row">
-            <div class="col-sm-4">
-              <table border="1" width="100%" cellpadding="10" style="border: 1px solid #ccc;">
-                <tr>
-                  <td width="100">
-                    <img src="../uploads/<?=$ProductDetail->product_detail_image_path?>/<?=$ProductDetail->product_detail_image?>" width="100" height="70">
-                  </td>
-                  <td>
-                    <label class="col-form-label-sm">Product Detail image:</label>
-                    <?= $form->field($ProductDetail, 'product_detail_image')->fileInput(['class' => 'form-control form-control-sm']); ?>
                   </td>
                 </tr>
               </table>

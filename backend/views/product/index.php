@@ -59,11 +59,20 @@ use yii\bootstrap\ActiveForm;
             ],
             [
                 'attribute' => 'product_icon',
-                'label' => 'Icon',
+                'label' => 'Image',
                 'format' => 'raw',
-                'contentOptions' => ['style' => 'width:50px'],
+                'contentOptions' => ['style' => 'width:80px'],
                 'value' => function ($model) {
-                    return '<img src="'.str_replace('/admin', '', Yii::getAlias('@web')).'/uploads/'.$model->product_icon_path.'/'.$model->product_icon.'" width="30">';
+                    return '<img src="'.str_replace('/admin', '', Yii::getAlias('@web')).'/uploads/'.$model->product_image_path.'/'.$model->product_image.'" width="50">';
+                },
+            ],
+            [
+                'attribute' => 'product_category',
+                'label' => 'Product Category',
+                'format' => 'raw',
+                // 'contentOptions' => ['style' => 'width:120px'],
+                'value' => function ($model) {
+                    return '<div style="height: 25px;overflow:hidden;">'.$model->productCategory->product_category_name_th.'</div>';
                 },
             ],
             [
@@ -90,7 +99,13 @@ use yii\bootstrap\ActiveForm;
                 'format' => 'raw',
                 'contentOptions' => ['style' => 'width:130px'],
                 'value' => function ($model) {
-                    return '<div style="height: 25px;overflow:hidden;">'.date('d/m/Y H:i:s', strtotime($model->modified_date));'</div>';
+                  if(!empty($model->modified_date)){
+                    $modified_date = date('d/m/Y H:i:s', strtotime($model->modified_date));
+                  }else{
+                    $modified_date = '-';
+                  }
+
+                  return '<div style="height: 25px;overflow:hidden;">'.$modified_date.'</div>';
                 },
             ],
             [

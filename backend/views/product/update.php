@@ -1,1 +1,1 @@
-<?= $this->render('_form', ['Product' => $Product,'ProductDetail' => $ProductDetail]);?>
+<?= $this->render('_form', ['Product' => $Product]);?>
