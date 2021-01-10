@@ -27,14 +27,19 @@ class HomeController extends \yii\web\Controller
 
         $Banner = Banner::findOne(['is_active' => 1,'banner_page_id' => 1,'banner_mapping_id' => 1,]);
     	$Promotion = Promotion::findAll(['is_active' => 1]);
-    	$Product = Product::findAll(['is_active' => 1]);
     	$Service = Service::find()
     	->where(['is_active' => 1])
     	->orderBy(['service_id'=> SORT_ASC])
     	->offset(0)
         ->limit(2)
     	->all();
+
         $Article = Article::findAll(['is_active' => 1]);
+
+        $Product = Product::find()
+        ->where(['is_active' => 1])
+        ->orderBy(['product_id' => SORT_ASC])
+        ->all();
         return $this->render('index', [
             'Banner' => $Banner,
     		'Promotion' => $Promotion,
@@ -43,5 +48,21 @@ class HomeController extends \yii\web\Controller
             'Article' => $Article
     	]);
     }
+    public function actionProduct($id)
+    {
+        $Product = \frontend\models\Product::find()
+        ->where(['is_active' => 1])
+        ->andWhere(['product_id' => $id])
+        ->asArray()
+        ->one();
 
+        $Product['product_name'] = $Product['product_name_'.Yii::$app->language];
+        $Product['product_detail'] = $Product['product_detail_'.Yii::$app->language];
+
+        return json_encode([
+            "status" => true,
+            "response" => $Product
+        ]);
+        exit;
+    }
 }

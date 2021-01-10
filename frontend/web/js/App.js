@@ -21,7 +21,8 @@
 	};
 
 	p.initializeInPjax = function() {
-        
+
+        this._enableEvents();
 	};
 
 	// =========================================================================
@@ -29,7 +30,13 @@
 	// =========================================================================
 
 	p._enableEvents = function () {
-
+		
+		$("#pjax-grid").on("pjax:start", function() {
+	      $('#loadingOverlay').show();
+	    });
+	    $("#pjax-grid").on("pjax:end", function() {
+	      $('#loadingOverlay').hide();
+	    });
 	};
 
 	// =========================================================================
@@ -47,11 +54,15 @@
             });
         });
     };
-
+    p.baseUrl = function(){
+    	var getUrl = window.location;
+        var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+    	return baseUrl;
+    }
 	// =========================================================================
 	// DEFINE NAMESPACE
 	// =========================================================================
 
-	window.appWEHOME = window.appRI || {};
-	window.appWEHOME.App = new App;
+	window.Web = window.Web || {};
+	window.Web.App = new App;
 }(jQuery)); // pass in (jQuery):

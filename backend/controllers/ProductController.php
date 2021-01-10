@@ -116,7 +116,9 @@ class ProductController extends \yii\web\Controller
     	// product
         $model->product_category = Yii::$app->request->post()['Product']['product_category'];
     	$model->product_name_th = Yii::$app->request->post()['Product']['product_name_th'];
-    	$model->product_name_en = Yii::$app->request->post()['Product']['product_name_en'];
+    	$model->product_detail_th = Yii::$app->request->post()['Product']['product_detail_th'];
+        $model->product_name_en = Yii::$app->request->post()['Product']['product_name_en'];
+        $model->product_detail_en = Yii::$app->request->post()['Product']['product_detail_en'];
 
         $model->meta_tag_title_th = Yii::$app->request->post()['Product']['meta_tag_title_th'];
         $model->meta_tag_title_en = Yii::$app->request->post()['Product']['meta_tag_title_en'];

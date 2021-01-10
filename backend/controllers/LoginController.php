@@ -42,7 +42,7 @@ class LoginController extends Controller
         // $user->login_username = 'admin';
         // $user->login_password =  $user->setPassword('1234');
         // $user->is_active = 1;
-        // $user->setPassword('1234');
+        // $user->setPassword('SC@Concrete2020');
         // $user->generateAuthKey();
         // $user->generateEmailVerificationToken();
         // $user->save();

@@ -15,8 +15,9 @@ class HomeAsset extends AssetBundle
         'css/home.css',
     ];
     public $js = [
+        'js/Home.js'
     ];
     public $depends = [
-
+    	'frontend\assets\AppAsset'
     ];
 }
