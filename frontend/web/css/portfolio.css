@@ -56,7 +56,11 @@
 .portfolio-posts .portfolio-property-list .portfolio-header h3{
 	font-size: 26px;
 }
-
+.portfolio-posts .portfolio-property-list .owl-carousel .entry-media a.active{
+	background: #e10000;
+    color: #fff;
+    border: 1px solid #ccc;
+}
 /* -------------------------------- */
 /* project */
 /* -------------------------------- */

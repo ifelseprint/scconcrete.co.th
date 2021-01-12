@@ -65,6 +65,7 @@ return [
                 // portfolio
                 '<portfolio_index:(portfolio|ผลงานที่ผ่านมา)>' => 'portfolio/index',
                 '<portfolio_index:(portfolio|ผลงานที่ผ่านมา)>/<portfolio_property:(property|อสังหาริมทรัพท์)>' => 'portfolio/property',
+                '<portfolio_index:(portfolio|ผลงานที่ผ่านมา)>/<portfolio_property:(property|อสังหาริมทรัพท์)>/<id>' => 'portfolio/property-view',
                 '<portfolio_index:(portfolio|ผลงานที่ผ่านมา)>/<portfolio_project:(project|โครงการ)>' => 'portfolio/project',
                 // news
                 '<news_index:(news|กิจกรรมและข่าวสาร)>' => 'news/index',
@@ -77,9 +78,10 @@ return [
                 '<contact_index:(contact)>/submit' => 'contact/index',
 
                 // default
-                // '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                // '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                // '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                // '<controller:[\w\-]+>'                       => '<controller>/index',
+                // '<controller:[\w\-]+>/<id:\d+>'              => '<controller>/view',
+                // '<controller:[\w\-]+>/<action:[\w\-]+>/<id>' => '<controller>/<action>',
+                // '<controller:[\w\-]+>/<action:[\w\-]+>'      => '<controller>/<action>',
        
                 // error
                 'error/404' => 'error/404',

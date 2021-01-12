@@ -15,8 +15,9 @@ class PortfolioAsset extends AssetBundle
         'css/portfolio.css',
     ];
     public $js = [
+        'js/Portfolio.js'
     ];
     public $depends = [
-
+    	'frontend\assets\AppAsset'
     ];
 }

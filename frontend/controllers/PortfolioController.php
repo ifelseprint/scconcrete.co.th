@@ -1,6 +1,7 @@
 <?php
 
 namespace frontend\controllers;
+use frontend\models\PortfolioDetail;
 use yii;
 // use common\models\Banner;
 class PortfolioController extends \yii\web\Controller
@@ -35,10 +36,41 @@ class PortfolioController extends \yii\web\Controller
     }
     public function actionProperty()
     {
+        $Portfolio = \common\models\Portfolio::find()
+        ->where(['is_active' => 1])
+        ->andWhere(['portfolio_category' => 1])
+        ->orderBy(['portfolio_id' => SORT_ASC])
+        ->all();
+
+        $PortfolioDetail = PortfolioDetail::find()
+        ->where(['is_active' => 1])
+        ->andWhere(['portfolio_id' => $Portfolio[0]->portfolio_id])
+        ->all();
+
         return $this->render('property', [
-            // 'Service' => $Service,
+            'Portfolio' => $Portfolio,
+            'PortfolioDetail' => $PortfolioDetail,
             // 'Banner' => $Banner
         ]);
+    }
+    public function actionPropertyView($id)
+    {
+        $PortfolioDetail = PortfolioDetail::find()
+        ->where(['is_active' => 1])
+        ->andWhere(['portfolio_id' => $id])
+        ->asArray()
+        ->all();
+
+        foreach ($PortfolioDetail as $key => $value) {
+            $PortfolioDetail[$key]['portfolio_detail_content'] = $value['portfolio_detail_content_'.Yii::$app->language];
+        }
+
+        return json_encode([
+            "status" => true,
+            "response" => $PortfolioDetail,
+            "language" => Yii::$app->language
+        ]);
+        exit;
     }
     public function actionProject()
     {
