@@ -48,14 +48,14 @@
                         var html = '<div class="col-md-4">';
                         html += '<div class="portfolio-box">';
                         html += '<div class="portfolio-image">';
-                        html += '<img src="'+baseUrl+'/uploads/'+v.portfolio_detail_image_path+'/'+v.portfolio_detail_image+'" width="100%">';
+                        html += '<img src="../../uploads/'+v.portfolio_detail_image_path+'/'+v.portfolio_detail_image+'" width="100%">';
                         html += '</div>';
                         html += '<div class="portfolio-title">';
                         html += v.portfolio_detail_content;
                         html += '</div>';
                         html += '</div>';
                         html += '</div>';
-                        
+
                         $(html).hide().appendTo('.portfolio-block .container .row').fadeIn(1000);
 
                     });
