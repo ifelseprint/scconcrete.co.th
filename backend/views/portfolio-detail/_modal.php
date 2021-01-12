@@ -6,7 +6,7 @@ use yii\helpers\Html;
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"><i class="icofont icofont-plus-circle"></i> Create Service</h5>
+                <h5 class="modal-title"><i class="icofont icofont-plus-circle"></i> Create Portfolio</h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body" style="padding-bottom: 0px;">
@@ -26,7 +26,7 @@ use yii\helpers\Html;
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"><i class="fas fa-edit"></i> Edit Service</h5>
+                <h5 class="modal-title"><i class="fas fa-edit"></i> Edit Portfolio</h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body" style="padding-bottom: 0px;">

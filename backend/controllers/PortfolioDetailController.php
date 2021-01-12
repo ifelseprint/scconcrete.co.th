@@ -2,14 +2,14 @@
 
 namespace backend\controllers;
 use Yii;
-use backend\models\Portfolio;
+use backend\models\PortfolioDetail;
 use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\Request;
 use yii\web\UploadedFile;
-class PortfolioController extends \yii\web\Controller
+class PortfolioDetailController extends \yii\web\Controller
 {
     public function behaviors()
     {
@@ -29,13 +29,14 @@ class PortfolioController extends \yii\web\Controller
     public function actionIndex()
     {
 
+
         $search = Yii::$app->request->queryParams;
-    	$model = new Portfolio();
+    	$model = new PortfolioDetail();
         $dataProvider = $model->search($search);
         if(Yii::$app->request->isPjax){
 
-        	if(!empty($search['Portfolio']['pageSize'])){
-        		$dataProvider->pagination->pageSize = $search['Portfolio']['pageSize'];
+        	if(!empty($search['PortfolioDetail']['pageSize'])){
+        		$dataProvider->pagination->pageSize = $search['PortfolioDetail']['pageSize'];
         	}
         	return $this->renderPartial('index', [
         		'model' => $model,
@@ -53,36 +54,36 @@ class PortfolioController extends \yii\web\Controller
     }
     public function actionCreate()
     {
-        $PortfolioCategory = ArrayHelper::map(\common\models\PortfolioCategory::find()
-        ->all(), 'id', 'portfolio_category_name_th');
+        $Portfolio = ArrayHelper::map(\common\models\Portfolio::find()
+        ->all(), 'portfolio_id', 'portfolio_name_th');
 
-    	$Portfolio = new Portfolio();
+    	$PortfolioDetail = new PortfolioDetail();
     	if (Yii::$app->request->isAjax) {
             if(Yii::$app->request->isPost){
-            	$save = $this->save($Portfolio,null,null,null);
+            	$save = $this->save($PortfolioDetail,null,null,null);
             }
         }
         return $this->renderAjax('create', [
 			'Portfolio' => $Portfolio,
-            'PortfolioCategory' => $PortfolioCategory,
+            'PortfolioDetail' => $PortfolioDetail,
 		]);
     }
 
     public function actionUpdate()
     {
-        $PortfolioCategory = ArrayHelper::map(\common\models\PortfolioCategory::find()
-        ->all(), 'id', 'portfolio_category_name_th');
+        $Portfolio = ArrayHelper::map(\common\models\Portfolio::find()
+        ->all(), 'portfolio_id', 'portfolio_name_th');
 
     	$id = Yii::$app->request->get('id');
-    	$Portfolio = Portfolio::findOne(['portfolio_id' => $id]);
+    	$PortfolioDetail = PortfolioDetail::findOne(['portfolio_detail_id' => $id]);
     	if (Yii::$app->request->isAjax) {
             if(Yii::$app->request->isPost){
-            	$save = $this->save($Portfolio,null,null,$id);
+            	$save = $this->save($PortfolioDetail,null,null,$id);
             }
         }
     	return $this->renderAjax('update', [
 			'Portfolio' => $Portfolio,
-            'PortfolioCategory' => $PortfolioCategory,
+            'PortfolioDetail' => $PortfolioDetail,
 		]);
     }
 
@@ -90,15 +91,11 @@ class PortfolioController extends \yii\web\Controller
     {
     	$id = Yii::$app->request->get('id');
     	$PortfolioDetail = \common\models\PortfolioDetail::find()
-		->where(['portfolio_id'=>$id])
-		->delete();
-
-    	$Portfolio = \common\models\Portfolio::find()
-		->where(['portfolio_id'=>$id])
+		->where(['portfolio_detail_id'=>$id])
 		->one()
 		->delete();
 
-		$model = new Portfolio();
+		$model = new PortfolioDetail();
 		$search = Yii::$app->request->queryParams;
         $dataProvider = $model->search($search);
 		return $this->render('index', [
@@ -113,20 +110,20 @@ class PortfolioController extends \yii\web\Controller
     {
 
         // Portfolio
-        $model->portfolio_category = Yii::$app->request->post()['Portfolio']['portfolio_category'];
-        $model->portfolio_name_th = Yii::$app->request->post()['Portfolio']['portfolio_name_th'];
-        $model->portfolio_name_en = Yii::$app->request->post()['Portfolio']['portfolio_name_en'];
-        $model->portfolio_image = UploadedFile::getInstance($model, 'portfolio_image');
-        $portfolio_image = $model->upload();
+        $model->portfolio_id = Yii::$app->request->post()['PortfolioDetail']['portfolio_id'];
+        $model->portfolio_detail_content_th = Yii::$app->request->post()['PortfolioDetail']['portfolio_detail_content_th'];
+        $model->portfolio_detail_content_en = Yii::$app->request->post()['PortfolioDetail']['portfolio_detail_content_en'];
+        $model->portfolio_detail_image = UploadedFile::getInstance($model, 'portfolio_detail_image');
+        $portfolio_detail_image = $model->upload();
 
-        if(!empty($portfolio_image)){
-            $model->portfolio_image = $portfolio_image['fileName'];
-            $model->portfolio_image_path = $portfolio_image['filePath'];
+        if(!empty($portfolio_detail_image)){
+            $model->portfolio_detail_image = $portfolio_detail_image['fileName'];
+            $model->portfolio_detail_image_path = $portfolio_detail_image['filePath'];
         }else{
-            $model->portfolio_image = $model->getOldAttribute('portfolio_image');
-            $model->portfolio_image_path = $model->getOldAttribute('portfolio_image_path');
+            $model->portfolio_detail_image = $model->getOldAttribute('portfolio_detail_image');
+            $model->portfolio_detail_image_path = $model->getOldAttribute('portfolio_detail_image_path');
         }
-        $model->is_active = Yii::$app->request->post()['Portfolio']['is_active'];
+        $model->is_active = Yii::$app->request->post()['PortfolioDetail']['is_active'];
         $model->save();
     }
 }

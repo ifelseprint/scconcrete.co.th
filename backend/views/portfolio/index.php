@@ -11,12 +11,12 @@ use yii\bootstrap\ActiveForm;
   <div class="container">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0 text-dark"><i class="icofont icofont-coins"></i> Service <small>List</small></h1>
+        <h1 class="m-0 text-dark"><i class="icofont icofont-coins"></i> Portfolio <small>List</small></h1>
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#"><i class="ti-home"></i> Home</a></li>
-          <li class="breadcrumb-item active">Service List</li>
+          <li class="breadcrumb-item active">Portfolio List</li>
         </ol>
       </div><!-- /.col -->
     </div><!-- /.row -->
@@ -58,30 +58,44 @@ use yii\bootstrap\ActiveForm;
                 'contentOptions' => ['style' => 'width:50px'],
             ],
             [
-                'attribute' => 'service_image',
+                'attribute' => 'portfolio_image',
                 'label' => 'Image',
                 'format' => 'raw',
-                'contentOptions' => ['style' => 'width:70px'],
+                'contentOptions' => ['style' => 'width:90px'],
                 'value' => function ($model) {
-                    return '<img src="'.str_replace('/admin', '', Yii::getAlias('@web')).'/uploads/'.$model->service_image_path.'/'.$model->service_image.'" width="50">';
+                    return '<img src="'.str_replace('/admin', '', Yii::getAlias('@web')).'/uploads/'.$model->portfolio_image_path.'/'.$model->portfolio_image.'" width="50">';
                 },
             ],
             [
-                'attribute' => 'service_name_th',
-                'label' => 'Service Name (TH)',
+                'attribute' => 'portfolio_category',
+                'label' => 'Portfolio Category',
                 'format' => 'raw',
-                // 'contentOptions' => ['style' => 'width:120px'],
+                'contentOptions' => ['style' => 'width:140px'],
                 'value' => function ($model) {
-                    return '<div style="height: 25px;overflow:hidden;">'.$model->service_name_th.'</div>';
+                  if(!empty($model->portfolioCategory->portfolio_category_name_th)){
+                    $portfolio_category = $model->portfolioCategory->portfolio_category_name_th;
+                  }else{
+                    $portfolio_category = '-';
+                  }
+                  return '<div style="height: 25px;overflow:hidden;">'.$portfolio_category.'</div>';
                 },
             ],
             [
-                'attribute' => 'service_name_en',
-                'label' => 'Service Name (EN)',
+                'attribute' => 'portfolio_name_th',
+                'label' => 'Portfolio Name (TH)',
                 'format' => 'raw',
                 // 'contentOptions' => ['style' => 'width:120px'],
                 'value' => function ($model) {
-                    return '<div style="height: 25px;overflow:hidden;">'.$model->service_name_en.'</div>';
+                    return '<div style="height: 25px;overflow:hidden;">'.$model->portfolio_name_th.'</div>';
+                },
+            ],
+            [
+                'attribute' => 'portfolio_name_en',
+                'label' => 'Portfolio Name (EN)',
+                'format' => 'raw',
+                // 'contentOptions' => ['style' => 'width:120px'],
+                'value' => function ($model) {
+                    return '<div style="height: 25px;overflow:hidden;">'.$model->portfolio_name_en.'</div>';
                 },
             ],
             [
@@ -90,7 +104,12 @@ use yii\bootstrap\ActiveForm;
                 'format' => 'raw',
                 'contentOptions' => ['style' => 'width:130px'],
                 'value' => function ($model) {
-                    return '<div style="height: 25px;overflow:hidden;">'.date('d/m/Y H:i:s', strtotime($model->modified_date));'</div>';
+                  if(!empty($model->modified_date)){
+                    $modified_date = date('d/m/Y H:i:s', strtotime($model->modified_date));
+                  }else{
+                    $modified_date = '-';
+                  }
+                  return '<div style="height: 25px;overflow:hidden;">'.$modified_date;'</div>';
                 },
             ],
             [
@@ -123,13 +142,13 @@ use yii\bootstrap\ActiveForm;
                     'class' => 'btn-modal-update',
                     'title' => 'edit',
                     'data-toggle' => 'modal',
-                    'value' => Url::to('service/update/'.$model->service_id),
+                    'value' => Url::to('portfolio/update/'.$model->portfolio_id),
                   ]);
                 },
                 'Delete' => function ($url, $model) {
-                  return Html::a('<span class="fas fa-trash-alt" style="padding:0px 2px;"></span>', Url::to('service/delete/'.$model->service_id), [
+                  return Html::a('<span class="fas fa-trash-alt" style="padding:0px 2px;"></span>', Url::to('portfolio/delete/'.$model->portfolio_id), [
                     'title' => 'delete',
-                    'data-confirm' => Yii::t('yii', 'Are you sure you want to delete '.$model->service_id.' this item?'),
+                    'data-confirm' => Yii::t('yii', 'Are you sure you want to delete '.$model->portfolio_id.' this item?'),
                     'data-method'  => 'post',
                     'data-pjax' => 1
                   ]);

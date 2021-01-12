@@ -44,23 +44,23 @@ AppAsset::register($this);
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="ti-clipboard"></i> Content Management</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow-sm">
               <li class="<?php echo (Yii::$app->controller->id=="banner" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/banner" class="nav-link">Banner / แบนเนอร์</a>
+                <a href="<?=Url::base(true);?>/banner" class="nav-link">Banner</a>
               </li>
               <li class="<?php echo (Yii::$app->controller->id=="product" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/product" class="nav-link">Product / สินค้า</a>
+                <a href="<?=Url::base(true);?>/product" class="nav-link">Product</a>
               </li>
               <li class="<?php echo (Yii::$app->controller->id=="article" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/article" class="nav-link">Article / บทความ</a>
+                <a href="<?=Url::base(true);?>/article" class="nav-link">News & Activity</a>
               </li>      
               <li class="<?php echo (Yii::$app->controller->id=="service" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/service" class="nav-link">Service / บริการ</a>
+                <a href="<?=Url::base(true);?>/portfolio" class="nav-link">Portfolio</a>
+              </li>
+              <li class="<?php echo (Yii::$app->controller->id=="service" ? 'active' : '' )?>">
+                <a href="<?=Url::base(true);?>/portfolio-detail" class="nav-link">Portfolio Detail</a>
               </li>
               <li class="<?php echo (Yii::$app->controller->id=="jobs" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/jobs" class="nav-link">Jobs / สมัครงาน</a>
-              </li>
-              <li class="<?php echo (Yii::$app->controller->id=="promotion" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/promotion" class="nav-link">Promotion / โปรโมชั่น</a>
-              </li>        
+                <a href="<?=Url::base(true);?>/jobs" class="nav-link">Jobs</a>
+              </li>     
             </ul>
           </li>
           <li class="nav-item dropdown">

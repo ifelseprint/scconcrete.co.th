@@ -5,7 +5,7 @@ namespace backend\models;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\web\UploadedFile;
-class Service extends \common\models\Service
+class Portfolio extends \common\models\Portfolio
 {
 
     public $pageSize = 25;
@@ -15,6 +15,10 @@ class Service extends \common\models\Service
         return array_merge(parent::rules(), [
             [['pageSize'], 'integer'],
         ]);
+    }
+    public function getPortfolioCategory()
+    {
+        return $this->hasOne(\common\models\PortfolioCategory::className(), ['id' => 'portfolio_category']);
     }
     public function upload()
     {
@@ -33,9 +37,9 @@ class Service extends \common\models\Service
         }
         $path_folder = $year."/".$month;
 
-        if(!empty($this->service_image)){
-            $image_file = $this->service_image->baseName.'_'.time().'.'.$this->service_image->extension;
-            $this->service_image->saveAs($folder_upload."/".$path_folder."/".$image_file);
+        if(!empty($this->portfolio_image)){
+            $image_file = 'portfolio_'.time().'.'.$this->portfolio_image->extension;
+            $this->portfolio_image->saveAs($folder_upload."/".$path_folder."/".$image_file);
             return [
             'fileName' => $image_file,
             'filePath' => $path_folder
@@ -47,20 +51,27 @@ class Service extends \common\models\Service
     public function search($params)
     {
 
-        $query = Service::find();
+        $query = Portfolio::find();
+        $query->joinWith(['portfolioCategory']);
+
         $dataProvider = new ActiveDataProvider([
             'pagination' => [
                 'pageSize' => $this->pageSize,
             ],
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['service_id' => SORT_DESC]]
+            'sort'=> ['defaultOrder' => ['portfolio_id' => SORT_DESC]]
         ]);
+
+        $dataProvider->sort->attributes['portfolioCategory'] = [
+            'asc' => ['portfolio_category.portfolio_category_name_th' => SORT_ASC],
+            'desc' => ['portfolio_category.portfolio_category_name_th' => SORT_DESC],
+        ];
 
         if (!($this->load($params))) {
             return $dataProvider;
         }
-        $query->andFilterWhere(['like', 'service_name_th', $this->service_name_th]);
-        $query->andFilterWhere(['like', 'service_name_en', $this->service_name_en]);
+        $query->andFilterWhere(['like', 'portfolio_name_th', $this->portfolio_name_th]);
+        $query->andFilterWhere(['like', 'portfolio_name_en', $this->portfolio_name_en]);
         $query->andFilterWhere(['=', 'is_active', $this->is_active]);
 
         return $dataProvider;

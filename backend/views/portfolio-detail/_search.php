@@ -6,9 +6,9 @@ use yii\helpers\Url;
 
 ?>
 
-<div class="service-search">
+<div class="portfolio-search">
     <?php $form = ActiveForm::begin([
-        'action' => ['service/index'],
+        'action' => ['portfolio-detail/index'],
         'method' => 'get',
         'options' => ['data-pjax' => true, 'id' => 'formSearch', 'class' => 'form-horizontal','enctype' => 'multipart/form-data'],
         'fieldConfig' => [
@@ -22,7 +22,7 @@ use yii\helpers\Url;
             <h3 class="card-title"><i class="icofont icofont-search"></i> Search</h3>
             <div class=" float-right">
 
-            <?= Html::button('<i class="icofont icofont-plus-circle"></i> Create Service', ['value' => Url::to('service/create') , 'class' => 'btn btn-success btn-sm' , 'id'=>'btn-modal-create']) ?>
+            <?= Html::button('<i class="icofont icofont-plus-circle"></i> Create Portfolio Detail', ['value' => Url::to('portfolio-detail/create') , 'class' => 'btn btn-success btn-sm' , 'id'=>'btn-modal-create']) ?>
             </div>
             <!-- /.card-tools -->
         </div>
@@ -30,12 +30,12 @@ use yii\helpers\Url;
         <div class="card-body">
             <div class="form-group-sm row">
                 <div class="col-sm-3">
-                    <label class="col-form-label-sm">Service Name (TH)</label>
-                    <?= $form->field($model, 'service_name_th')->textInput(['value' => (!empty($search['Service']['service_name_th'])) ? $search['Service']['service_name_th'] : '' ])?>
+                    <label class="col-form-label-sm">Portfolio Detail Name (TH)</label>
+                    <?= $form->field($model, 'portfolio_detail_content_th')->textInput()?>
                 </div>
                 <div class="col-sm-3">
-                    <label class="col-form-label-sm">Service Name (EN)</label>
-                    <?= $form->field($model, 'service_name_en')->textInput(['value' => (!empty($search['Service']['service_name_en'])) ? $search['Service']['service_name_en'] : '' ])?>
+                    <label class="col-form-label-sm">Portfolio Detail Name (EN)</label>
+                    <?= $form->field($model, 'portfolio_detail_content_en')->textInput()?>
                 </div>
                 <div class="col-sm-3">
                     <label class="col-form-label-sm">Status</label>
