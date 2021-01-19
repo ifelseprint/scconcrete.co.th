@@ -15,7 +15,19 @@ PortfolioAsset::register($this);
         
 		<div class="portfolio-vdeo">
 			<div class="container">
+
 				<div class="row" style="padding-bottom: 15px;">
+					<div class="col-sm-4">
+	    				<iframe width="100%" height="315" src="https://www.youtube.com/embed/NTRWSF4-_zc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    			</div>
+	    			<div class="col-sm-4">
+	    				<iframe width="100%" height="315" src="https://www.youtube.com/embed/J1sPdPP-7hI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    			</div>
+	    			<div class="col-sm-4">
+	    				<iframe width="100%" height="315" src="https://www.youtube.com/embed/EIOHAyp289E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    			</div>
+	    		</div>
+				<!-- <div class="row" style="padding-bottom: 15px;">
 					<div class="col-lg-6"><img src="<?=Url::base(true);?>/img/vdo_size.jpg"></div>
 					<div class="col-lg-6"><img src="<?=Url::base(true);?>/img/vdo_size.jpg"></div>
 				</div>
@@ -45,50 +57,50 @@ PortfolioAsset::register($this);
 		                    			<article class="entry entry-display">
 		                    				<figure class="entry-media">
 		                    					<a href="#"><img src="<?=Url::base(true);?>/img/vdo_size.jpg"></a>
-		                    				</figure><!-- End .entry-media -->
+		                    				</figure>
 		                    			</article>
 		                    		</div>
 		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
 		                    			<article class="entry entry-display">
 		                    				<figure class="entry-media">
 		                    					<a href="#"><img src="<?=Url::base(true);?>/img/vdo_size.jpg"></a>
-		                    				</figure><!-- End .entry-media -->
+		                    				</figure>
 		                    			</article>
 		                    		</div>
 		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
 		                    			<article class="entry entry-display">
 		                    				<figure class="entry-media">
 		                    					<a href="#"><img src="<?=Url::base(true);?>/img/vdo_size.jpg"></a>
-		                    				</figure><!-- End .entry-media -->
+		                    				</figure>
 		                    			</article>
 		                    		</div>
 		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
 		                    			<article class="entry entry-display">
 		                    				<figure class="entry-media">
 		                    					<a href="#"><img src="<?=Url::base(true);?>/img/vdo_size.jpg"></a>
-		                    				</figure><!-- End .entry-media -->
+		                    				</figure>
 		                    			</article>
 		                    		</div>
 		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
 		                    			<article class="entry entry-display">
 		                    				<figure class="entry-media">
 		                    					<a href="#"><img src="<?=Url::base(true);?>/img/vdo_size.jpg"></a>
-		                    				</figure><!-- End .entry-media -->
+		                    				</figure>
 		                    			</article>
 		                    		</div>
 		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
 		                    			<article class="entry entry-display">
 		                    				<figure class="entry-media">
 		                    					<a href="#"><img src="<?=Url::base(true);?>/img/vdo_size.jpg"></a>
-		                    				</figure><!-- End .entry-media -->
+		                    				</figure>
 		                    			</article>
 		                    		</div>
 		                    	</div>
 		                    </div>
-		                </div><!-- End .owl-carousel -->
+		                </div>
 
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="portfolio-project-list">
