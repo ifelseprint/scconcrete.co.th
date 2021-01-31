@@ -21,10 +21,12 @@ class PrecastController extends \yii\web\Controller
     public function actionView()
     {
         $slug_id = Yii::$app->getRequest()->getQueryParam('slug_id');
+
         $models = \common\models\Product::find()
-        ->where(['is_active' => 1])
-        ->andWhere(['product_id' => $slug_id])
-        ->orderBy(['product_id' => SORT_ASC])
+        ->joinWith('productDetails')
+        ->where(['product.is_active' => 1])
+        ->andWhere(['product.product_id' => $slug_id])
+        ->orderBy(['product.product_id' => SORT_ASC])
         ->asArray()
         ->one();
 

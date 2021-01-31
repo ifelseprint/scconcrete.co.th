@@ -29,7 +29,7 @@ ProductAsset::register($this);
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="product-detail">
-                            <?=$product['product_detail_'.Yii::$app->language];?>
+                            <?=$product['productDetails'][0]['product_detail_content_'.Yii::$app->language];?>
                         </div>
                     </div>
                 </div>

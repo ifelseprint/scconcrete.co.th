@@ -49,6 +49,12 @@ $url = $action=='create'? $action : $action.'/'.$Product['product_id'];
               <?= $form->field($Product, 'product_detail_th')->textArea(['class' => 'form-control form-control-sm editor']) ?>
             </div>
           </div>
+          <div class="form-group-sm row">
+            <div class="col-sm-12">
+              <label class="col-form-label-sm">Product Description (Expanded):</label>
+              <?= $form->field($ProductDetail, 'product_detail_content_th')->textArea(['class' => 'form-control form-control-sm editor']) ?>
+            </div>
+          </div>
           <hr>
           <div class="form-group-sm row">
             <div class="col-sm-12">
@@ -95,6 +101,12 @@ $url = $action=='create'? $action : $action.'/'.$Product['product_id'];
             <div class="col-sm-12">
               <label class="col-form-label-sm">Product Description:</label>
               <?= $form->field($Product, 'product_detail_en')->textArea(['class' => 'form-control form-control-sm editor']) ?>
+            </div>
+          </div>
+          <div class="form-group-sm row">
+            <div class="col-sm-12">
+              <label class="col-form-label-sm">Product Description (Expanded):</label>
+              <?= $form->field($ProductDetail, 'product_detail_content_en')->textArea(['class' => 'form-control form-control-sm editor']) ?>
             </div>
           </div>
           <hr>

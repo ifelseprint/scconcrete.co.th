@@ -54,13 +54,15 @@ class ProductController extends \yii\web\Controller
     public function actionCreate()
     {
     	$Product = new Product();
+        $ProductDetail = new ProductDetail();
     	if (Yii::$app->request->isAjax) {
             if(Yii::$app->request->isPost){
-				$save = $this->save($Product,null);
+				$save = $this->save($Product,$ProductDetail,null);
             }
         }
         return $this->renderAjax('create', [
 			'Product' => $Product,
+            'ProductDetail' => $ProductDetail,
 		]);
     }
 
@@ -68,19 +70,26 @@ class ProductController extends \yii\web\Controller
     {
     	$id = Yii::$app->request->get('id');
     	$Product = Product::findOne(['product_id' => $id]);
+        $ProductDetail = ProductDetail::findOne(['product_id' => $id]);
     	if (Yii::$app->request->isAjax) {
             if(Yii::$app->request->isPost){
-            	$save = $this->save($Product,$id);
+            	$save = $this->save($Product,$ProductDetail,$id);
             }
         }
     	return $this->renderAjax('update', [
 			'Product' => $Product,
+            'ProductDetail' => $ProductDetail,
 		]);
     }
 
     public function actionDelete()
     {
     	$id = Yii::$app->request->get('id');
+
+        $ProductDetail = ProductDetail::find()
+        ->where(['product_id'=>$id])
+        ->one()
+        ->delete();
 
     	$Product = Product::find()
 		->where(['product_id'=>$id])
@@ -97,7 +106,7 @@ class ProductController extends \yii\web\Controller
         ]);
     }
 
-    public function save($model,$id=null)
+    public function save($model,$model2=null,$id=null)
     {
     	$folder_upload = Yii::getAlias('@frontend').'/web/uploads';
     	$year = date("Y");
@@ -114,19 +123,9 @@ class ProductController extends \yii\web\Controller
         $path_folder = $year."/".$month;
 
     	// product
-        $model->product_category = Yii::$app->request->post()['Product']['product_category'];
-    	$model->product_name_th = Yii::$app->request->post()['Product']['product_name_th'];
-    	$model->product_detail_th = Yii::$app->request->post()['Product']['product_detail_th'];
-        $model->product_name_en = Yii::$app->request->post()['Product']['product_name_en'];
+        $model->load(Yii::$app->request->post());
+        $model->product_detail_th = Yii::$app->request->post()['Product']['product_detail_th'];
         $model->product_detail_en = Yii::$app->request->post()['Product']['product_detail_en'];
-
-        $model->meta_tag_title_th = Yii::$app->request->post()['Product']['meta_tag_title_th'];
-        $model->meta_tag_title_en = Yii::$app->request->post()['Product']['meta_tag_title_en'];
-        $model->meta_tag_description_th = Yii::$app->request->post()['Product']['meta_tag_description_th'];
-        $model->meta_tag_description_en = Yii::$app->request->post()['Product']['meta_tag_description_en'];
-        $model->meta_tag_keywords_th = Yii::$app->request->post()['Product']['meta_tag_keywords_th'];
-        $model->meta_tag_keywords_en = Yii::$app->request->post()['Product']['meta_tag_keywords_en'];
-
         $model->product_image = UploadedFile::getInstance($model, 'product_image');
         if(!empty($model->product_image)){
         $product_image_file  = $model->product_image->baseName.'_'.time().'.'.$model->product_image->extension;
@@ -139,7 +138,12 @@ class ProductController extends \yii\web\Controller
         $model->product_image_path = $model->getOldAttribute('product_image_path');
         }
 
-		$model->is_active = Yii::$app->request->post()['Product']['is_active'];
 		$model->save();
+         // product detail
+        $model2->load(Yii::$app->request->post());
+        $model2->product_id = $model->product_id;
+        $model2->save();
+
+        return true;
     }
 }
