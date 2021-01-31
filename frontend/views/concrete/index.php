@@ -48,14 +48,16 @@ ConcreteAsset::register($this);
 					$product_name = 'product_name_'.Yii::$app->language;
 				?>  
 			        <div class="col-md-4">
-	    				<div class="concrete-box">
-		    				<div class="concrete-image">
-		    					<img src="<?=Url::base(true);?>/uploads/<?=$value['product_image_path'];?>/<?=$value['product_image'];?>" width="100%">
-							</div>
-		    				<div class="concrete-title">
-		    					<?=$value['product_name_th'];?>
-		    				</div>
-		    			</div>
+                        <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_concrete');?>/<?=$value[$product_name];?>-<?=$value['product_id'];?>">
+    	    				<div class="concrete-box">
+    		    				<div class="concrete-image">
+    		    					<img src="<?=Url::base(true);?>/uploads/<?=$value['product_image_path'];?>/<?=$value['product_image'];?>" width="100%">
+    							</div>
+    		    				<div class="concrete-title">
+    		    					<?=$value['product_name_th'];?>
+    		    				</div>
+    		    			</div>
+                        </a>
 			        </div>
 				<?php
 				    $rowCount++;

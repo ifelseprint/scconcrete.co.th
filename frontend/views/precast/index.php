@@ -48,14 +48,16 @@ PrecastAsset::register($this);
 					$product_name = 'product_name_'.Yii::$app->language;
 				?> 
 			        <div class="col-md-4">
-	    				<div class="precast-box">
-		    				<div class="precast-image">
-		    					<img src="<?=Url::base(true);?>/uploads/<?=$value['product_image_path'];?>/<?=$value['product_image'];?>" width="100%">
-							</div>
-		    				<div class="precast-title">
-		    					<?=$value['product_name_th'];?>
-		    				</div>
-		    			</div>
+                        <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_precast');?>/<?=$value[$product_name];?>-<?=$value['product_id'];?>">
+    	    				<div class="precast-box">
+    		    				<div class="precast-image">
+    		    					<img src="<?=Url::base(true);?>/uploads/<?=$value['product_image_path'];?>/<?=$value['product_image'];?>" width="100%">
+    							</div>
+    		    				<div class="precast-title">
+    		    					<?=$value['product_name_th'];?>
+    		    				</div>
+    		    			</div>
+                        </a>
 			        </div>
 				<?php
 				    $rowCount++;

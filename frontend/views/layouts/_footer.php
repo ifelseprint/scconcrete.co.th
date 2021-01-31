@@ -25,12 +25,12 @@ use frontend\widgets\ProductFooter;
                 <div class="col-sm-12 col-lg-6">
                     <div class="footer-menu-list">
                         <ul>
-                            <li><a href="#">เกี่ยวกับ SC</a></li>
-                            <li><a href="#">คอนกรีตอัดแรงสำเร็จรูป SC Pre Cast</a></li>
-                            <li><a href="#">คอนกรีตผสมเสร็จ SC Concrete</a></li>
-                            <li><a href="#">ร่วมงานกับ SC</a></li>
-                            <li><a href="#">ข่าวประชาสัมพันธ์</a></li>
-                            <li><a href="#">ติดต่อ</a></li>
+                            <li><a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_about');?>"><?= Yii::t('app', 'menu_about');?></a></li>
+                            <li><a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_precast');?>"><?= Yii::t('app', 'menu_precast');?></a></li>
+                            <li><a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_concrete');?>"><?= Yii::t('app', 'menu_concrete');?></a></li>
+                            <li><a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_join_us');?>"><?= Yii::t('app', 'menu_join_us');?></a></li>
+                            <li><a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_news');?>"><?= Yii::t('app', 'menu_news');?></a></li>
+                            <li><a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_contact_us');?>"><?= Yii::t('app', 'menu_contact_us');?></a></li>
                         </ul>
                     </div>
                 </div>
