@@ -126,8 +126,6 @@ use frontend\assets\PortfolioAsset;
 				}
 				?>
 				</div>
-
-	        	
 	        </div>
         </div>
     </div>

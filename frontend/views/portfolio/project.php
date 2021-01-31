@@ -135,48 +135,24 @@ PortfolioAsset::register($this);
 		                    }'>
 		                    <div class="owl-stage-outer">
 		                    	<div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.4s ease 0s; width: 1188px;">
+
+		                    		<?php
+		                    		$i = 1;
+		                    		foreach ($Portfolio as $data) {
+		                    			$active = ($i==1) ? 'active' : '';
+		                    			$portfolio_name = 'portfolio_name_'.Yii::$app->language;
+									?>
 		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
 		                    			<article class="entry entry-display">
 		                    				<figure class="entry-media">
-		                    					<a href="#">บจก. ศิริไพบูลย์ พัฒนาการ จำกัด</a>
+		                    					<a href="javascript:void(0)" class="<?=$active?> row-portfolio" data-target="<?= Yii::t('app', 'menu_property');?>/<?=$data->portfolio_id;?>" >
+		                    						<?=$data->$portfolio_name?>
+		                    					</a>
 		                    				</figure><!-- End .entry-media -->
 		                    			</article>
 		                    		</div>
-		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
-		                    			<article class="entry entry-display">
-		                    				<figure class="entry-media">
-		                    					<a href="#" class="active">บริษัท ไทยทาเคนาคาสากล ก่อสร้าง จำกัด</a>
-		                    				</figure><!-- End .entry-media -->
-		                    			</article>
-		                    		</div>
-		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
-		                    			<article class="entry entry-display">
-		                    				<figure class="entry-media">
-		                    					<a href="#">หจก มารุพงษ์ ซีวิลล์ครับ</a>
-		                    				</figure><!-- End .entry-media -->
-		                    			</article>
-		                    		</div>
-		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
-		                    			<article class="entry entry-display">
-		                    				<figure class="entry-media">
-		                    					<a href="#">บริษัท พรอสเพอร์ ไทธรรม์ จำกัด</a>
-		                    				</figure><!-- End .entry-media -->
-		                    			</article>
-		                    		</div>
-		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
-		                    			<article class="entry entry-display">
-		                    				<figure class="entry-media">
-		                    					<a href="#">บริษัท ไชน่าสเตท ZHONGCE</a>
-		                    				</figure><!-- End .entry-media -->
-		                    			</article>
-		                    		</div>
-		                    		<div class="owl-item active" style="width: 376px; margin-right: 20px;">
-		                    			<article class="entry entry-display">
-		                    				<figure class="entry-media">
-		                    					<a href="#">บจก แสงฟ้า ซิโน-ไทย จำกัด</a>
-		                    				</figure><!-- End .entry-media -->
-		                    			</article>
-		                    		</div>
+		                    		<?php $i++;} ?>
+
 		                    	</div>
 		                    </div>
 		                    <div class="owl-nav disabled">
@@ -206,80 +182,35 @@ PortfolioAsset::register($this);
 				?>
 				<div class="row">
 				<?php
-				// foreach ($portfolio as $value){
-				// 	$portfolio_name = 'portfolio_name_'.Yii::$app->language;
-				// 	$portfolio_content = 'portfolio_content_'.Yii::$app->language;
+				foreach ($PortfolioDetail as $value){
+					$portfolio_content = 'portfolio_detail_content_'.Yii::$app->language;
 				?>  
 			        <div class="col-md-4">
 	    				<div class="portfolio-box">
 		    				<div class="portfolio-image">
-		    					<img src="<?=Url::base(true);?>/uploads/2020/10/Pic_28.jpg" width="100%">
+		    					<img src="<?=Url::base(true);?>/uploads/<?=$value->portfolio_detail_image_path?>/<?=$value->portfolio_detail_image?>" width="100%">
 							</div>
 		    				<div class="portfolio-title">
-		    					Kent ทาวนโฮม 2 ชั้น
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="portfolio-box">
-		    				<div class="portfolio-image">
-		    					<img src="<?=Url::base(true);?>/uploads/2020/10/Pic_30.jpg" width="100%">
-							</div>
-		    				<div class="portfolio-title">
-		    					Kent ทาวนโฮม 2 ชั้น
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="portfolio-box">
-		    				<div class="portfolio-image">
-		    					<img src="<?=Url::base(true);?>/uploads/2020/10/Pic_31.jpg" width="100%">
-							</div>
-		    				<div class="portfolio-title">
-		    					Kent ทาวนโฮม 2 ชั้น
-		    				</div>
-		    			</div>
-			        </div>
-
-			        <div class="col-md-4">
-	    				<div class="portfolio-box">
-		    				<div class="portfolio-image">
-		    					<img src="<?=Url::base(true);?>/uploads/2020/10/Pic_40.jpg" width="100%">
-							</div>
-		    				<div class="portfolio-title">
-		    					Kent ทาวนโฮม 2 ชั้น
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="portfolio-box">
-		    				<div class="portfolio-image">
-		    					<img src="<?=Url::base(true);?>/uploads/2020/10/Pic_41.jpg" width="100%">
-							</div>
-		    				<div class="portfolio-title">
-		    					Kent ทาวนโฮม 2 ชั้น
-		    				</div>
-		    			</div>
-			        </div>
-			        <div class="col-md-4">
-	    				<div class="portfolio-box">
-		    				<div class="portfolio-image">
-		    					<img src="<?=Url::base(true);?>/uploads/2020/10/Pic_46.jpg" width="100%">
-							</div>
-		    				<div class="portfolio-title">
-		    					Kent ทาวนโฮม 2 ชั้น
+		    					<?=$value->$portfolio_content?>
 		    				</div>
 		    			</div>
 			        </div>
 				<?php
-				//     $rowCount++;
-				//     if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
-				// }
+				    // $rowCount++;
+				    // if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
+				}
 				?>
 				</div>
-
-	        	
 	        </div>
         </div>
     </div>
 </main>
+<?php
+$script = <<<JS
+$("document").ready(function(){
+    Web.Portfolio.initializeInPjax();
+});
+JS;
+$this->registerJs($script);
+PortfolioAsset::register($this);
+?>

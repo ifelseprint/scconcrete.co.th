@@ -112,56 +112,56 @@ AboutAsset::register($this);
 					                    }'>
 					                      <div class="owl-stage-outer">
 					                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.4s ease 0s; width: 1188px;">
-					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
+					                          <!-- <div class="owl-item active" style="width: 376px; margin-right: 20px;">
 					                            <article class="entry entry-display">
 					                              <figure class="entry-media">
 					                                <a href="#">
-					                                  	<img src="<?=Url::base(true);?>/img/logo1.jpg" alt="image desc" >
+					                                  	<img src="<?=Url::base(true);?>/img/logo_company_1.jpg" alt="image desc" >
 					                                  	<div class="desc">
 					                                  		<div>บริษัท ซุน คอนสตรัคชั่น แอนด์ เอ็นจิเนียริ่ง จำกัด</div>
 															<div>SUEN CONSTRUCTION AND ENGINEERING CO.,LTD</div>
 														</div>
 					                                </a>
-					                              </figure><!-- End .entry-media -->
+					                              </figure>
 					                            </article>
 					                          </div>
 					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
 					                            <article class="entry entry-display">
 					                              <figure class="entry-media">
 					                                <a href="#">
-					                                  	<img src="<?=Url::base(true);?>/img/logo1.jpg" alt="image desc">
+					                                  	<img src="<?=Url::base(true);?>/img/logo_company_2.jpg" alt="image desc">
 					                                  	<div class="desc">
 					                                  		<div>บริษัท ซุน เจนเนอรัล แอนด์ เอ็นจิเนียริ่ง จำกัด</div>
 															<div>SUEN GENERAL AND ENGINEERING CO.,LTD</div>
 														</div>
 					                                </a>
-					                              </figure><!-- End .entry-media -->
+					                              </figure>
 					                            </article>
-					                          </div>
+					                          </div> -->
 					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
 					                            <article class="entry entry-display">
 					                              <figure class="entry-media">
 					                                <a href="#">
-					                                  	<img src="<?=Url::base(true);?>/img/logo3.jpg" alt="image desc">
+					                                  	<img src="<?=Url::base(true);?>/img/logo_company_1.jpg" alt="image desc">
 					                                  	<div class="desc">
 					                                  		<div>บริษัท เอสซี เรียลเอสเตท ดีเวลลอปเม้นท์ จำกัด</div>
 															<div>SC REAL ESTATE DEVELOPMENT CO.,LTD</div>
 														</div>
 					                                </a>
-					                              </figure><!-- End .entry-media -->
+					                              </figure>
 					                            </article>
 					                          </div>
 					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
 					                            <article class="entry entry-display">
 					                              <figure class="entry-media">
 					                                <a href="#">
-					                                  	<img src="<?=Url::base(true);?>/img/logo4.jpg" alt="image desc">
+					                                  	<img src="<?=Url::base(true);?>/img/logo_company_2.jpg" alt="image desc">
 					                                  	<div class="desc">
 					                                  		<div>บริษัท เอสซี เฮ้าส์ซิ่ง ดีเวลลอปเม้นท์ จำกัด</div>
 															<div>SC HOUSING DEVELOPMENT CO.,LTD</div>
 														</div>
 					                                </a>
-					                              </figure><!-- End .entry-media -->
+					                              </figure>
 					                            </article>
 					                          </div>
 					                        </div>
