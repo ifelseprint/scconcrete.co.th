@@ -21,7 +21,7 @@ JoinAsset::register($this);
 					<div class="join-content">
 						<div class="join-content-box">
 							<div class="join-title-header">
-								<span class="text-header">ตำแหน่งงาน</span>
+								<span class="text-header"><?= Yii::t('app', 'txt_position');?></span>
 							</div>
 							<div class="join-apply">
 								<ul>
@@ -37,9 +37,9 @@ JoinAsset::register($this);
 							</div>
 							<hr>
 							<div class="join-title-contact">
-								<span class="text-header">ติดต่อฝ่ายบุคคล</span>
-								<div>บริษัท ซุน คอนสตรัคชั่น แอนด์ เอ็นจิเนียริ่ง จำกัด</div>
-								<div>ที่อยู่ 8899 หมู่ 4 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง</div>
+								<span class="text-header"><?=Yii::$app->translated->get(33);?></span>
+								<div><?=Yii::$app->translated->get(34);?></div>
+								<div><?=Yii::$app->translated->get(35);?></div>
 							</div>
 						</div>
 					</div>
@@ -55,7 +55,7 @@ JoinAsset::register($this);
 						</div>
 						<hr>
 						<div style="text-align: center;">
-							<a href="<?= Url::base(true).'/'.Yii::t('app', 'menu_join_us').'/'.$Jobs[0][$jobs_name].'-'.$Jobs[0]['jobs_id']?>" class="btn-join">สมัครงาน</a>
+							<a href="<?= Url::base(true).'/'.Yii::t('app', 'menu_join_us').'/'.$Jobs[0][$jobs_name].'-'.$Jobs[0]['jobs_id']?>" class="btn-join"><?= Yii::t('app', 'btn_apply_job');?></a>
 						</div>
 					</div>
 				</div>

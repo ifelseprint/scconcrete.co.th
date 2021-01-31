@@ -64,8 +64,8 @@ class TranslateController extends \yii\web\Controller
     	if (Yii::$app->request->isAjax) {
             if(Yii::$app->request->isPost){
 
-                $Translate->translate_th = Yii::$app->request->post()['Translate']['translate_th'];
-                $Translate->translate_en = Yii::$app->request->post()['Translate']['translate_en'];
+                $Translate->translate_th = nl2br(Yii::$app->request->post()['Translate']['translate_th']);
+                $Translate->translate_en = nl2br(Yii::$app->request->post()['Translate']['translate_en']);
             	$Translate->save();
             }
         }

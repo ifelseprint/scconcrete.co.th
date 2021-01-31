@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 use Yii;
+use common\models\Branch;
 use frontend\models\ContactForm;
 use yii\web\Request;
 class ContactController extends \yii\web\Controller
@@ -25,6 +26,8 @@ class ContactController extends \yii\web\Controller
 
     	$submitForm = Yii::$app->request->post();
     	$ContactForm = new ContactForm();
+        $Branch = Branch::findAll(['is_active' => 1]);
+
        	if(Yii::$app->request->isPjax){
 
             $ContactForm->load($submitForm);
@@ -33,11 +36,13 @@ class ContactController extends \yii\web\Controller
 
         	return $this->renderPartial('index', [
         		'ContactForm' => $ContactForm,
+                'Branch' => $Branch,
                 'Action' => 'insert'
         	]);
         }else{
         	return $this->render('index', [
         		'ContactForm' => $ContactForm,
+                'Branch' => $Branch,
                 'Action' => 'view'
         	]);
 

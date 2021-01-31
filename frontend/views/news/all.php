@@ -34,7 +34,7 @@ NewsAsset::register($this);
                         <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_news');?>/<?=$value->$news_name;?>-<?=$value->news_id?>">
                             <img src="<?=Url::base(true);?>/uploads/<?=$value->news_image_path?>/<?=$value->news_image?>" width="100%">
                             <div class="overlay">
-                                <div class="text">อ่านเพิ่มเติม</div>
+                                <div class="text"><?= Yii::t('app', 'txt_readmore');?></div>
                              </div>
                         </a>
                     </div>

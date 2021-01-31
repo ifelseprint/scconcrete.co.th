@@ -38,7 +38,7 @@ $url = $action=='create'? $action : $action.'/'.$Translate['translate_id'];
           <div class="form-group-sm row">
             <div class="col-sm-12">
               <label class="col-form-label-sm">Text :</label>
-              <?= $form->field($Translate, 'translate_th')->textArea(['class' => 'form-control form-control-sm']) ?>
+              <?= $form->field($Translate, 'translate_th')->textArea(['rows'=>5,'class' => 'form-control form-control-sm']) ?>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ $url = $action=='create'? $action : $action.'/'.$Translate['translate_id'];
           <div class="form-group-sm row">
             <div class="col-sm-12">
               <label class="col-form-label-sm">Text :</label>
-              <?= $form->field($Translate, 'translate_en')->textArea(['class' => 'form-control form-control-sm']) ?>
+              <?= $form->field($Translate, 'translate_en')->textArea(['rows'=>5,'class' => 'form-control form-control-sm']) ?>
             </div>
           </div>
           

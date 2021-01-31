@@ -18,17 +18,17 @@ ConcreteAsset::register($this);
         		<div class="row">
         			<div class="col-md-8 col-md-offset-2">
         				<div class="concrete-block-title">
-        					<h3>SC concrete</h3>
-        					<h4>คอนกรีตอัดแรงสำเร็จรูป</h4>
+        					<h3><?=Yii::$app->translated->get(51);?></h3>
+        					<h4><?=Yii::$app->translated->get(52);?></h4>
         				</div>
         				<div class="concrete-block-content">
-        					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim mauris sit amet quam cursus egestas. Duis porta augue sapien, id ultrices lectus rhoncus et. Nulla pellentesque libero vitae magna pharetra vulputate. Nullam urna leo, pharetra ut lacinia quis, consectetur quis est. In vehicula, dui id semper commodo, mi orci rhoncus velit, nec pretium mauris orci vel velit. Nunc gravida euismod scelerisque. Suspendisse tellus sem, eleifend id finibus sit amet, elementum ac quam. Praesent gravida metus est, vitae feugiat erat dignissim molestie. Vivamus sit amet arcu nec odio maximus placerat in ac metus. Donec vulputate purus non pharetra ultricies. Integer vestibulum tellus condimentum nunc iaculis, id dignissim ligula convallis. Morbi rhoncus semper justo eu aliquet. Donec in nunc lectus. Sed mollis massa at enim rutrum, vel dapibus tortor interdum.
+        					<?=Yii::$app->translated->get(53);?>
         				</div>
         				<div class="concrete-block-banner">
         					<img src="<?=Url::base(true);?>/img/concrete_banner.jpg" width="100%">
         				</div>
         				<div class="concrete-block-banner-footer">
-        					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim mauris sit amet quam cursus egestas. Duis porta augue sapien, id ultrices lectus rhoncus et. Nulla pellentesque libero vitae magna pharetra vulputate. Nullam urna leo, pharetra ut lacinia quis, consectetur quis est. In vehicula, dui id semper commodo, mi orci rhoncus velit, nec pretium mauris orci vel velit. Nunc gravida euismod scelerisque. Suspendisse tellus sem,
+        					<?=Yii::$app->translated->get(54);?>
         				</div>
         			</div>
         		</div>

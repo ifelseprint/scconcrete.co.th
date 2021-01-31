@@ -63,9 +63,9 @@ use yii\bootstrap\ActiveForm;
                 'attribute' => 'page_id',
                 'label' => 'Page',
                 'format' => 'raw',
-                'contentOptions' => ['style' => 'width:80px'],
+                'contentOptions' => ['style' => 'width:100px'],
                 'value' => function ($model) {
-                    return $model->pages->page_name_th;
+                    return (!empty($model->pages->page_name_th) ? $model->pages->page_name_th : 'null');
                 },
             ],
             [

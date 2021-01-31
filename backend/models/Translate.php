@@ -30,7 +30,7 @@ class Translate extends \common\models\Translate
                 'pageSize' => $this->pageSize,
             ],
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['page_id' => SORT_DESC]]
+            'sort'=> ['defaultOrder' => ['page_id' => SORT_ASC]]
         ]);
 
         if (!($this->load($params))) {

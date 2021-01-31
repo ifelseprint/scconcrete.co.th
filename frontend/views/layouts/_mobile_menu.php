@@ -11,7 +11,7 @@ use frontend\widgets\ProductMenu;
         
         <form action="#" method="get" class="mobile-search">
             <label for="mobile-search" class="sr-only">Search</label>
-            <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search product ..." required>
+            <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="<?= Yii::t('app', 'btn_search');?>" required>
             <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
         </form>
 
@@ -22,31 +22,41 @@ use frontend\widgets\ProductMenu;
         </ul>
 
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
+            <div class="tab-pane show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
                 <nav class="mobile-nav">
                     <ul class="mobile-menu">
-                        <!-- <li>
+                        <li class="<?php echo (Yii::$app->controller->id=="home" ? 'active' : '' )?>">
                             <a href="<?=Url::base(true);?>"><?= Yii::t('app', 'menu_home');?></a>
                         </li>
-                        <li >
+                        <li class="<?php echo (Yii::$app->controller->id=="about" ? 'active' : '' )?>">
                             <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_about');?>"><?= Yii::t('app', 'menu_about');?></a>
                         </li>
-                        <li>
-                            <a href="#"><?= Yii::t('app', 'menu_product');?></a>
-                            <?= ProductMenu::widget(array('action'=>'link-nav')); ?>
+                        <li class="<?php echo (Yii::$app->controller->id=="precast" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_precast');?>"><?= Yii::t('app', 'menu_precast');?></a>
                         </li>
-                        <li>
-                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_article');?>"><?= Yii::t('app', 'menu_article');?></a>
+                        <li class="<?php echo (Yii::$app->controller->id=="concrete" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_concrete');?>"><?= Yii::t('app', 'menu_concrete');?></a>
                         </li>
-                        <li>
-                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_service');?>"><?= Yii::t('app', 'menu_service');?></a>
+                        <li class="<?php echo (Yii::$app->controller->id=="portfolio" ? 'active' : '' )?>">
+                            <a href="#"><?= Yii::t('app', 'menu_portfolio');?></a>
+                            <ul>
+                                <li class="<?php echo (Yii::$app->controller->action->id=="property" ? 'active' : '' )?>">
+                                    <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_portfolio');?>/<?= Yii::t('app', 'menu_property');?>"><?= Yii::t('app', 'menu_property');?></a>
+                                </li>
+                                <li class="<?php echo (Yii::$app->controller->action->id=="project" ? 'active' : '' )?>">
+                                    <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_portfolio');?>/<?= Yii::t('app', 'menu_project');?>"><?= Yii::t('app', 'menu_project');?></a>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
+                        <li class="<?php echo (Yii::$app->controller->id=="news" ? 'active' : '' )?>">
+                            <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_news');?>"><?= Yii::t('app', 'menu_news');?></a>
+                        </li>
+                        <li class="">
                             <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_join_us');?>"><?= Yii::t('app', 'menu_join_us');?></a>
                         </li>
-                        <li>
+                        <li class="<?php echo (Yii::$app->controller->id=="contact" ? 'active' : '' )?>">
                             <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_contact_us');?>"><?= Yii::t('app', 'menu_contact_us');?></a>
-                        </li> -->
+                        </li>
                     </ul>
                 </nav><!-- End .mobile-nav -->
             </div><!-- .End .tab-pane -->

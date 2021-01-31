@@ -11,11 +11,20 @@ return [
     'menu_join_us' => 'join us',
     'menu_contact_us' => 'contact us',
 
+    'txt_position' => 'Position',
     'txt_readmore' => 'Read more',
     'txt_activity' => 'Activity',
     'txt_for_company' => 'Company',
     'txt_for_social' => 'Social Contribution',
     'txt_apply_jobs' => 'Apply for a position',
+
+    'txt_standardized' => 'Standardized',
+    'txt_delivery_on_time' => 'Delivery on time',
+    'txt_precast_concrete' => 'Precast concrete',
+    'txt_concrete_mix' => 'Concrete mix',
+
+    'btn_apply_job' => 'Apply Job',
+    'btn_search' => 'Search in website',
 
     'social_activity' => 'social contribution activities',
     'company_activity' => 'company activity'

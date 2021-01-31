@@ -80,7 +80,7 @@ use yii\bootstrap\ActiveForm;
 <div class="form-group-sm row">
   <div class="col-sm-12">
   	<?=$form->field($JobsForm, 'jobs_form_view')->hiddenInput(['value'=> $JobView])->label(false);?>
-    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+    <?= Html::submitButton(Yii::t('app', 'btn_apply_job'), ['class' => 'btn btn-primary']) ?>
   </div>
 </div>
 <?php ActiveForm::end(); ?>

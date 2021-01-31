@@ -42,8 +42,7 @@ JoinAsset::register($this);
 
 					<?php }else{ ?>
 					<div>
-						<div>Thank you for your submission</div>
-						<div>Send data successfully.</div>
+						<?=Yii::$app->translated->get(63);?>
 					</div>
 					<?php } ?>
 				</div>

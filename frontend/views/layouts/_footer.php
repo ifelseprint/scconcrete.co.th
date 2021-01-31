@@ -82,7 +82,7 @@ use frontend\widgets\ProductFooter;
                     <div style="float: right;">
                         <form>
                             <label id="search-label">
-                                <input type="text" id="search" class="form-control" placeholder="ค้นหาบริการภายในเว็บ" />
+                                <input type="text" id="search" class="form-control" placeholder="<?= Yii::t('app', 'btn_search');?>" />
                             </label>
                         </form>
                     </div>
@@ -91,8 +91,8 @@ use frontend\widgets\ProductFooter;
                             <tr>
                                 <td><span style=" padding: 5px 15px;border: 2px solid #444444;border-radius: 50% 50%;margin: auto 10px;font-size: 26px;"><i class="fa fa-phone" aria-hidden="true"></i></span></td>
                                 <td>
-                                    <p style="font-size: 16px;font-weight: 100;line-height: 7px;letter-spacing: 5px;">CALL CENTER</p>
-                                    <p style="font-size: 26px;">036-029888</p>
+                                    <p style="font-size: 16px;font-weight: 100;line-height: 7px;letter-spacing: 5px;"><?=Yii::$app->translated->get(71);?></p>
+                                    <p style="font-size: 26px;"><?=Yii::$app->translated->get(72);?></p>
                                 </td>
                             </tr>
                         </table>
@@ -105,7 +105,7 @@ use frontend\widgets\ProductFooter;
 
     <div class="footer-bottom">
         <div class="container">
-            <p class="footer-copyright">Copyright © 2020 SC CONCRETE ALL RIGHTS RESERVED.</p><!-- End .footer-copyright -->
+            <p class="footer-copyright">Copyright © 2020 - <?=date('Y')?> SC CONCRETE ALL RIGHTS RESERVED.</p><!-- End .footer-copyright -->
         </div><!-- End .container -->
     </div><!-- End .footer-bottom -->
 </footer><!-- End .footer -->

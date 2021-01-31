@@ -52,7 +52,7 @@ use frontend\widgets\ProductMenu;
                         <li class="<?php echo (Yii::$app->controller->id=="contact" ? 'active' : '' )?>">
                             <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_contact_us');?>"><?= Yii::t('app', 'menu_contact_us');?></a>
                         </li>
-                        <li class="telephone"><a href="#" style="letter-spacing: 2px;">Tel . 038-029888</a></li>
+                        <li class="telephone"><a href="#" style="letter-spacing: 2px;">Tel . <?=Yii::$app->translated->get(72);?></a></li>
                     </ul><!-- End .menu -->
                 </nav><!-- End .main-nav -->
             </div>

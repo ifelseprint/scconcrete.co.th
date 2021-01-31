@@ -48,10 +48,12 @@ class NewsController extends \yii\web\Controller
 
         if(Yii::t('app', 'social_activity')==$slug_name){
             $news_category = 1;
+            $page_id = 12;
         }else if(Yii::t('app', 'company_activity')==$slug_name){
             $news_category = 2;
+            $page_id = 13;
         }
-        $Pages = \common\models\Pages::findOne(['is_active' => 1,'page_id' => 4]);
+        $Pages = \common\models\Pages::findOne(['is_active' => 1,'page_id' => $page_id]);
         $meta_tag_title = "meta_tag_title_".Yii::$app->language;
         $meta_tag_description = "meta_tag_description_".Yii::$app->language;
         $meta_tag_keywords = "meta_tag_keywords_".Yii::$app->language;
@@ -66,7 +68,6 @@ class NewsController extends \yii\web\Controller
             'content' => $Pages->$meta_tag_keywords
         ]);
 
-        $Banner = Banner::findOne(['is_active' => 1,'banner_page_id' => 4,'banner_mapping_id' => 1,]);
         $News = \common\models\News::find()
         ->where(['is_active' => 1])
         ->andWhere(['news_category' => $news_category])
@@ -75,7 +76,6 @@ class NewsController extends \yii\web\Controller
         $NewsCategory = NewsCategory::findOne(['id' => $news_category]);
 
         return $this->render('all', [
-            'Banner' => $Banner,
             'News' => $News,
             'NewsCategory' => $NewsCategory
         ]);

@@ -108,8 +108,8 @@ PortfolioAsset::register($this);
 	    		<div class="row">
 	    			<div class="col-lg-12">
 	    				<div class="portfolio-header">
-							<h1>Portfolio</h1>
-							<h3>งานโครงการ</h3>
+	    					<h1><?=Yii::$app->translated->get(61)?></h1>
+							<h3><?=Yii::$app->translated->get(62)?></h3>
 	        			</div>
 	        		</div>
 	        	</div>

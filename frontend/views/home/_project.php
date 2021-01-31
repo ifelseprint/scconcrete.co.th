@@ -9,7 +9,7 @@ use yii\helpers\Url;
                 <img src="img/reference_project.png" width="250" style="display: inline;">
             </div>
             <div class="col-xs-12 col-lg-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus enim gravida enim convallis, a interdum tellus lobortis. Integer ullamcorper mattis lectus, nec sagittis diam fringilla sed. Vivamus sit amet auctor velit. Maecenas eget velit eu felis tincidunt aliquam. Ut a laoreet nisi. Vestibulum eleifend nisl quis orci lobortis hendrerit.
+                <?=Yii::$app->translated->get(10);?>
             </div>
         </div>
         <div class="row">

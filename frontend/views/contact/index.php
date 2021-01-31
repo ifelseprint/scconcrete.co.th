@@ -25,122 +25,37 @@ ContactAsset::register($this);
 	    		<div class="row">
 	    			<div class="col-12 col-md-5">
 	    				<div class="contact-company">
-		    				บริษัท ซุน คอนสตรัคชั่น แอนด์ เอ็นจิเนียริ่ง จำกัด<br>
-							8899 M.4 Pluakdaeng, Rayong, 21140
+		    				<?=Yii::$app->translated->get(64);?>
 						</div>
 						<div class="contact-address">
 							<div class="contact-address-bg">
 								<table>
+									<?php
+									foreach ($Branch as $value){
+										$branch_name = 'branch_name_'.Yii::$app->language;
+										$branch_address = 'branch_address_'.Yii::$app->language;
+									?>
 									<tr height="65">
 										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
 										<td width="75%">
 											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
+							    				<?=$value->$branch_name?><br/>
+												<?=$value->$branch_address?>
 											</div>
 										</td>
 										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
 									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
-									<tr height="65">
-										<td width="30"><img src="<?=Url::base(true);?>/img/icon-marker.png" width="100%"></td>
-										<td width="75%">
-											<div class="contact-company-inside">
-							    				สาขาปลวกแดง<br>
-												330 หมู่ 1 ต.ปลวกแดง อ.ปลวกแดง จ.ระยอง 21140
-											</div>
-										</td>
-										<td width="100"><img src="<?=Url::base(true);?>/img/map_google.png" width="100%" style="border-radius: 7px;box-shadow: 0px 0px 5px #ccc;"></td>
-									</tr>
+									<?php } ?>
 								</table>
 							</div>
 						</div>
 						<div class="contact-service">
-							<div style="font-size: 20px;">ศูนย์บริการเอสซีคอนกรีต</div>
-							<div style="font-size: 24px;"><img src="<?=Url::base(true);?>/img/icon-tel2.png" style="display: inline-block; width: 40px;"> 038-029888</div>
+							<div style="font-size: 20px;"><?=Yii::$app->translated->get(65);?></div>
+							<div style="font-size: 24px;"><img src="<?=Url::base(true);?>/img/icon-tel2.png" style="display: inline-block; width: 40px;"> <?=Yii::$app->translated->get(66);?></div>
 							<div>
-								<img src="<?=Url::base(true);?>/img/icon-website.png" style="display: inline-block; width: 20px;"> Fax. 038-029889
-								<img src="<?=Url::base(true);?>/img/icon-line3.png" style="display: inline-block; width: 20px;"> @scen
-								<img src="<?=Url::base(true);?>/img/icon-website.png" style="display: inline-block; width: 20px; "> www.scconcrete.co.th
+								<img src="<?=Url::base(true);?>/img/icon-website.png" style="display: inline-block; width: 20px;"> <?=Yii::$app->translated->get(67);?>
+								<img src="<?=Url::base(true);?>/img/icon-line3.png" style="display: inline-block; width: 20px;"> <?=Yii::$app->translated->get(68);?>
+								<img src="<?=Url::base(true);?>/img/icon-website.png" style="display: inline-block; width: 20px; "> <?=Yii::$app->translated->get(69);?>
 							</div>
 						</div>
 	        		</div>
@@ -153,8 +68,7 @@ ContactAsset::register($this);
 	    						<?= $this->render('_form', ['ContactForm'=> $ContactForm]); ?>
 	    						<?php }else{ ?>
 								<div>
-									<div>Thank you for your submission</div>
-									<div>Send data successfully.</div>
+									<?=Yii::$app->translated->get(70);?>
 								</div>
 								<?php } ?>
 	    					</div>

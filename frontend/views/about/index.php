@@ -43,11 +43,11 @@ AboutAsset::register($this);
 							<div class="row">
 								<div class="col-lg-12">
 									<div class="content-box">
-										<h1 class="red">SC PRECAST</h1>
-										<h1>SOLUTION</h1>
+										<h1 class="red"><?=Yii::$app->translated->get(18);?></h1>
+										<h1><?=Yii::$app->translated->get(19);?></h1>
 										<br>
 										<div class="content-text">
-											<?=Yii::$app->translated->get(18);?>
+											<?=Yii::$app->translated->get(20);?>
 										</div>
 									</div>
 								</div>
@@ -66,7 +66,7 @@ AboutAsset::register($this);
 								<div class="col-lg-12">
 									<div class="content-box">
 										<div class="content-text">
-											<?=Yii::$app->translated->get(19);?>
+											<?=Yii::$app->translated->get(48);?>
 										</div>
 									</div>
 								</div>
@@ -86,7 +86,7 @@ AboutAsset::register($this);
 				<div class="row">
 					<div class="col-lg-12" style="padding: 60px;">
 						<div class="header-text border-line">
-							<?=Yii::$app->translated->get(20);?></h1>
+							<?=Yii::$app->translated->get(49);?></h1>
 						</div>
 						<div>
 							<div class="row">
