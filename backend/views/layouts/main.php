@@ -46,6 +46,9 @@ AppAsset::register($this);
               <li class="<?php echo (Yii::$app->controller->id=="banner" ? 'active' : '' )?>">
                 <a href="<?=Url::base(true);?>/banner" class="nav-link">Banner</a>
               </li>
+              <li class="<?php echo (Yii::$app->controller->id=="branch" ? 'active' : '' )?>">
+                <a href="<?=Url::base(true);?>/branch" class="nav-link">Branch</a>
+              </li>
               <li class="<?php echo (Yii::$app->controller->id=="customer" ? 'active' : '' )?>">
                 <a href="<?=Url::base(true);?>/customer" class="nav-link">Customer</a>
               </li>

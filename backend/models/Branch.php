@@ -5,37 +5,36 @@ namespace backend\models;
 use Yii;
 use yii\data\ActiveDataProvider;
 
-class Pages extends \common\models\Pages
+class Branch extends \common\models\Branch
 {
 
     public $pageSize = 25;
-    public $searchPage;
+
 
     public function rules()
     {
         return array_merge(parent::rules(), [
-            [['searchPage','pageSize'], 'integer'],
+            [['pageSize'], 'integer'],
         ]);
     }
-
     public function search($params)
-    { 
-        $query = Pages::find();
-        $query->andWhere(['<>', 'page_id', 99]);
+    {
 
+        $query = Branch::find();
         $dataProvider = new ActiveDataProvider([
             'pagination' => [
                 'pageSize' => $this->pageSize,
             ],
             'query' => $query,
-            'sort'=> ['defaultOrder' => ['page_id' => SORT_DESC]]
+            'sort'=> ['defaultOrder' => ['branch_id' => SORT_DESC]]
         ]);
 
         if (!($this->load($params))) {
             return $dataProvider;
         }
-
-        $query->andFilterWhere(['=', 'page_id', $this->searchPage]);
+        $query->andFilterWhere(['like', 'branch_name_th', $this->branch_name_th]);
+        $query->andFilterWhere(['like', 'branch_name_en', $this->branch_name_en]);
+        $query->andFilterWhere(['=', 'is_active', $this->is_active]);
 
         return $dataProvider;
     }
@@ -46,8 +45,8 @@ class Pages extends \common\models\Pages
         }
         if ($insert) {
             //new record code here
-            // $this->created_user =  '1';
-            // $this->created_date =  date("Y-m-d H:i:s");
+            $this->created_user =  '1';
+            $this->created_date =  date("Y-m-d H:i:s");
         } else {
             $this->modified_user =  '1';
             $this->modified_date = date("Y-m-d H:i:s");
