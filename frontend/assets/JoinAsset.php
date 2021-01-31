@@ -19,6 +19,7 @@ class JoinAsset extends AssetBundle
     public $js = [
     	'plugins/moment/moment.min.js',
     	'plugins/daterangepicker/daterangepicker.js',
+        'js/Join.js'
     ];
     public $depends = [
     	'frontend\assets\AppAsset'

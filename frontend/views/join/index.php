@@ -25,9 +25,14 @@ JoinAsset::register($this);
 							</div>
 							<div class="join-apply">
 								<ul>
-									<li><a href="#">QC</a></li>
-									<li><a href="#" class="active">วิศวกรโยธา</a></li>
-									<li><a href="#">ตำแหน่งอื่นๆ</a></li>
+									<?php
+									$i = 1;
+									foreach ($Jobs as $key => $value) {
+										$active = ($i==1) ? 'active' : '';
+										$job_name = 'jobs_name_'.Yii::$app->language;
+									?>
+									<li><a href="javascript:void(0)" class="row-join <?=$active?>" data-target="<?= Yii::t('app', 'menu_join_us');?>/view/<?=$value->jobs_id;?>"><?=$value->$job_name?></a></li>
+									<?php $i++;} ?>
 								</ul>
 							</div>
 							<hr>
@@ -41,35 +46,16 @@ JoinAsset::register($this);
 				</div>
 				<div class="col-xs-12 col-lg-8 box-right">
 					<div class="join-description">
-						<p>
-							<b>คุณสมบัติทั่วไป</b><br>
-							- อายุ 18-35 ปี<br>
-							- จบปริญญาตรี สาขาใดก็ได้<br>
-							- มีความขยัน อดทน ตั้งใจทำงาน รักงานบริการ<br>
-							- มีมนุษยสัมพันธ์ดี<br>
-							- มีประสบการณ์ ธุรกิจค้าปลีก จะพิจารณาเป็นพิเศษ<br><br>
-							<b>สวัสดิการ และรายได้</b><br>
-							- ค่าครองชีพ<br>
-							- กองทุนสำรองเลี้ยงชีพ<br>
-							- ค่ารักษาพยาบาล<br>
-							- ตรวจสุขภาพประจำปี<br>
-							- ค่านั่งเครื่องแคชเชียร์<br>
-							- เงินรางวัลจากยอดขาย (Incentive)<br>
-							- วันลาพิเศษ<br>
-							- เงินช่วยเหลือต่างๆ<br>
-							- ค่าครองชีพ<br>
-							- กองทุนสำรองเลี้ยงชีพ<br>
-							- ค่ารักษาพยาบาล<br>
-							- ตรวจสุขภาพประจำปี<br>
-							- ค่านั่งเครื่องแคชเชียร์<br>
-							- เงินรางวัลจากยอดขาย (Incentive)<br>
-							- วันลาพิเศษ<br>
-							- เงินช่วยเหลือต่างๆ<br>
-							ส่งใบสมัครด้วยตัวเองมาที่ อีเมล hr@wehomemart.com<br>
-						</p>
+						<div class="join-description-content">
+							<?php
+								$jobs_name = 'jobs_name_'.Yii::$app->language;
+		                      	$jobs_content = 'jobs_content_'.Yii::$app->language;
+		                      	echo $Jobs[0][$jobs_content];
+		                    ?>
+						</div>
 						<hr>
 						<div style="text-align: center;">
-							<a href="#" class="btn-join">สมัครงาน</a>
+							<a href="<?= Url::base(true).'/'.Yii::t('app', 'menu_join_us').'/'.$Jobs[0][$jobs_name].'-'.$Jobs[0]['jobs_id']?>" class="btn-join">สมัครงาน</a>
 						</div>
 					</div>
 				</div>

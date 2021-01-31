@@ -74,10 +74,22 @@ class PortfolioController extends \yii\web\Controller
     }
     public function actionProject()
     {
-          return $this->render('project', [
-            // 'Service' => $Service,
+        $Portfolio = \common\models\Portfolio::find()
+        ->where(['is_active' => 1])
+        ->andWhere(['portfolio_category' => 2])
+        ->orderBy(['portfolio_id' => SORT_ASC])
+        ->all();
+
+        $PortfolioDetail = PortfolioDetail::find()
+        ->where(['is_active' => 1])
+        ->andWhere(['portfolio_id' => $Portfolio[0]->portfolio_id])
+        ->all();
+
+        return $this->render('project', [
+            'Portfolio' => $Portfolio,
+            'PortfolioDetail' => $PortfolioDetail,
             // 'Banner' => $Banner
-        ]);  
+        ]);
     }
     // public function actionView()
     // {

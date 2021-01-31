@@ -5,8 +5,7 @@ use yii\bootstrap\ActiveForm;
 ?>
 <?php $form = ActiveForm::begin([
   'method' => 'post',
-  'id' => 'form-contact',
-  'action' => ['join/view'],
+  'id' => 'form-join',
   'options' => ['enctype' => 'multipart/form-data','data-pjax' => true ],
   'fieldConfig' => [
     'template' => "{input} {error}",

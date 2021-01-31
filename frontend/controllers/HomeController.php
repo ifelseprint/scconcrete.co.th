@@ -3,7 +3,7 @@ namespace frontend\controllers;
 use common\models\Banner;
 use common\models\Promotion;
 use common\models\Product;
-use common\models\Article;
+use common\models\News;
 use yii;
 class HomeController extends \yii\web\Controller
 {
@@ -27,7 +27,7 @@ class HomeController extends \yii\web\Controller
         $Banner = Banner::findOne(['is_active' => 1,'banner_page_id' => 1,'banner_mapping_id' => 1,]);
     	$Promotion = Promotion::findAll(['is_active' => 1]);
 
-        $Article = Article::findAll(['is_active' => 1]);
+        $News = News::findAll(['is_active' => 1]);
 
         $Product = Product::find()
         ->where(['is_active' => 1])
@@ -37,7 +37,7 @@ class HomeController extends \yii\web\Controller
             'Banner' => $Banner,
     		'Promotion' => $Promotion,
     		'Product' => $Product,
-            'Article' => $Article
+            'News' => $News
     	]);
     }
     public function actionProduct($id)
