@@ -1,8 +1,9 @@
 <?php
 
 namespace frontend\controllers;
-use yii;
 use common\models\Banner;
+use common\models\Partner;
+use yii;
 class AboutController extends \yii\web\Controller
 {
     public function actionIndex()
@@ -21,9 +22,11 @@ class AboutController extends \yii\web\Controller
             'name' => 'keywords',
             'content' => $Pages->$meta_tag_keywords
         ]);
-    	$Banner = Banner::findOne(['is_active' => 1,'banner_page_id' => 3,'banner_mapping_id' => 1,]);
+    	$Banner = Banner::findOne(['is_active' => 1,'banner_page_id' => 3,'banner_mapping_id' => 1]);
+        $Partner = Partner::findAll(['is_active' => 1]);
         return $this->render('index', [
             'Banner' => $Banner,
+            'Partner' => $Partner
     	]);
     }
 }

@@ -1,9 +1,9 @@
 <?php
 namespace frontend\controllers;
 use common\models\Banner;
-use common\models\Promotion;
-use common\models\Product;
+use common\models\Customer;
 use common\models\News;
+use common\models\Product;
 use yii;
 class HomeController extends \yii\web\Controller
 {
@@ -25,7 +25,7 @@ class HomeController extends \yii\web\Controller
         ]);
 
         $Banner = Banner::findOne(['is_active' => 1,'banner_page_id' => 1,'banner_mapping_id' => 1,]);
-    	$Promotion = Promotion::findAll(['is_active' => 1]);
+    	$Customer = Customer::findAll(['is_active' => 1]);
 
         $News = News::findAll(['is_active' => 1]);
 
@@ -35,7 +35,7 @@ class HomeController extends \yii\web\Controller
         ->all();
         return $this->render('index', [
             'Banner' => $Banner,
-    		'Promotion' => $Promotion,
+    		'Customer' => $Customer,
     		'Product' => $Product,
             'News' => $News
     	]);

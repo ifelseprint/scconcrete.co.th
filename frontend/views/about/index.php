@@ -138,32 +138,25 @@ AboutAsset::register($this);
 					                              </figure>
 					                            </article>
 					                          </div> -->
+					                          <?php
+					                          foreach ($Partner as $key => $value) {
+					                            // $partner_name = 'partner_name_'.Yii::$app->language;
+					                          ?>
 					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
 					                            <article class="entry entry-display">
 					                              <figure class="entry-media">
 					                                <a href="#">
-					                                  	<img src="<?=Url::base(true);?>/img/logo_company_1.jpg" alt="image desc">
+					                                  	<img src="<?=Url::base(true);?>/uploads/<?=$value->partner_image_path;?>/<?=$value->partner_image;?>" alt="image desc">
 					                                  	<div class="desc">
-					                                  		<div>บริษัท เอสซี เรียลเอสเตท ดีเวลลอปเม้นท์ จำกัด</div>
-															<div>SC REAL ESTATE DEVELOPMENT CO.,LTD</div>
+					                                  		<div><?=$value->partner_name_th;?></div>
+															<div><?=$value->partner_name_en;?></div>
 														</div>
 					                                </a>
 					                              </figure>
 					                            </article>
 					                          </div>
-					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-					                            <article class="entry entry-display">
-					                              <figure class="entry-media">
-					                                <a href="#">
-					                                  	<img src="<?=Url::base(true);?>/img/logo_company_2.jpg" alt="image desc">
-					                                  	<div class="desc">
-					                                  		<div>บริษัท เอสซี เฮ้าส์ซิ่ง ดีเวลลอปเม้นท์ จำกัด</div>
-															<div>SC HOUSING DEVELOPMENT CO.,LTD</div>
-														</div>
-					                                </a>
-					                              </figure>
-					                            </article>
-					                          </div>
+					                          <?php } ?>
+
 					                        </div>
 					                      </div>
 					                      <div class="owl-nav disabled">

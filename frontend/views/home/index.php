@@ -12,7 +12,7 @@ AppAsset::register($this);
     <?= $this->render('_about'); ?>
     <?= $this->render('_service'); ?>
     <?= $this->render('_product', ['Product'=> $Product]); ?>
-    <?= $this->render('_project'); ?>
+    <?= $this->render('_project', ['Customer'=> $Customer]); ?>
     <?= $this->render('_parallax'); ?>
 </main><!-- End .main -->
 <?php

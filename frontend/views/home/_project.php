@@ -54,90 +54,24 @@ use yii\helpers\Url;
                     </style>
                       <div class="owl-stage-outer">
                         <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.4s ease 0s; width: 1188px;">
+                          
+                          <?php
+                          foreach ($Customer as $key => $value) {
+                            $customer_name = 'customer_name_'.Yii::$app->language;
+                          ?>
                           <div class="owl-item active" style="width: 376px; margin-right: 20px;">
                             <article class="entry entry-display">
                               <figure class="entry-media">
                                 <a href="#">
-                                  <img src="<?=Url::base(true);?>/img/pic-product1.jpg" alt="image desc">
+                                  <img src="<?=Url::base(true);?>/uploads/<?=$value->customer_image_path;?>/<?=$value->customer_image;?>" alt="<?=$value->$customer_name;?>">
                                 </a>
                               </figure><!-- End .entry-media -->
                               <div class="entry-media-content">
-                                HLP2-4
+                                <?=$value->$customer_name;?>
                               </div>
                             </article>
                           </div>
-                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-                            <article class="entry entry-display">
-                              <figure class="entry-media">
-                                <a href="#">
-                                  <img src="<?=Url::base(true);?>/img/pic-product2.jpg" alt="image desc">
-                                </a>
-                              </figure><!-- End .entry-media -->
-                              <div class="entry-media-content">
-                                HLP2-4
-                              </div>
-                            </article>
-                          </div>
-                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-                            <article class="entry entry-display">
-                              <figure class="entry-media">
-                                <a href="#">
-                                  <img src="<?=Url::base(true);?>/img/pic-product3.jpg" alt="image desc">
-                                </a>
-                              </figure><!-- End .entry-media -->
-                              <div class="entry-media-content">
-                                HLP2-4
-                              </div>
-                            </article>
-                          </div>
-                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-                            <article class="entry entry-display">
-                              <figure class="entry-media">
-                                <a href="#">
-                                  <img src="<?=Url::base(true);?>/img/pic-product4.jpg" alt="image desc">
-                                </a>
-                              </figure><!-- End .entry-media -->
-                              <div class="entry-media-content">
-                                HLP2-4
-                              </div>
-                            </article>
-                          </div>
-                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-                            <article class="entry entry-display">
-                              <figure class="entry-media">
-                                <a href="#">
-                                  <img src="<?=Url::base(true);?>/img/pic-product5.jpg" alt="image desc">
-                                </a>
-                              </figure><!-- End .entry-media -->
-                              <div class="entry-media-content">
-                                HLP2-4
-                              </div>
-                            </article>
-                          </div>
-                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-                            <article class="entry entry-display">
-                              <figure class="entry-media">
-                                <a href="#">
-                                  <img src="<?=Url::base(true);?>/img/pic-product6.jpg" alt="image desc">
-                                </a>
-                              </figure><!-- End .entry-media -->
-                              <div class="entry-media-content">
-                                HLP2-4
-                              </div>
-                            </article>
-                          </div>
-                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-                            <article class="entry entry-display">
-                              <figure class="entry-media">
-                                <a href="#">
-                                  <img src="<?=Url::base(true);?>/img/pic-product7.jpg" alt="image desc">
-                                </a>
-                              </figure><!-- End .entry-media -->
-                              <div class="entry-media-content">
-                                HLP2-4
-                              </div>
-                            </article>
-                          </div>
+                          <?php } ?>
                         </div>
                       </div>
                       <div class="owl-nav disabled">
