@@ -1,0 +1,1 @@
+<?= $this->render('_form', ['News' => $News,'NewsDetail' => $NewsDetail,'NewsCategory'=>$NewsCategory]);?>

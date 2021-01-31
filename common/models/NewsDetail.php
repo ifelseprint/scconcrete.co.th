@@ -12,6 +12,7 @@ use Yii;
  * @property string|null $news_detail_content_th
  * @property string|null $news_detail_content_en
  * @property string|null $news_detail_image
+ * @property string|null $news_detail_image_path
  *
  * @property News $news
  */
@@ -34,6 +35,7 @@ class NewsDetail extends \yii\db\ActiveRecord
             [['news_id'], 'integer'],
             [['news_detail_content_th', 'news_detail_content_en'], 'string'],
             [['news_detail_image'], 'string', 'max' => 50],
+            [['news_detail_image_path'], 'string', 'max' => 20],
             [['news_id'], 'exist', 'skipOnError' => true, 'targetClass' => News::className(), 'targetAttribute' => ['news_id' => 'news_id']],
         ];
     }
@@ -49,6 +51,7 @@ class NewsDetail extends \yii\db\ActiveRecord
             'news_detail_content_th' => 'News Detail Content Th',
             'news_detail_content_en' => 'News Detail Content En',
             'news_detail_image' => 'News Detail Image',
+            'news_detail_image_path' => 'News Detail Image Path',
         ];
     }
 

@@ -50,7 +50,7 @@ AppAsset::register($this);
                 <a href="<?=Url::base(true);?>/product" class="nav-link">Product</a>
               </li>
               <li class="<?php echo (Yii::$app->controller->id=="article" ? 'active' : '' )?>">
-                <a href="<?=Url::base(true);?>/article" class="nav-link">News & Activity</a>
+                <a href="<?=Url::base(true);?>/news" class="nav-link">News & Activity</a>
               </li>      
               <li class="<?php echo (Yii::$app->controller->id=="service" ? 'active' : '' )?>">
                 <a href="<?=Url::base(true);?>/portfolio" class="nav-link">Portfolio</a>

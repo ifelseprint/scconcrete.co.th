@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "news".
  *
  * @property int $news_id
+ * @property int|null $news_category
  * @property string|null $news_name_th
  * @property string|null $news_name_en
  * @property string|null $news_content_th
@@ -45,7 +46,7 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['is_active', 'created_user', 'modified_user', 'pageview'], 'integer'],
+            [['news_category', 'is_active', 'created_user', 'modified_user', 'pageview'], 'integer'],
             [['created_date', 'modified_date'], 'safe'],
             [['meta_tag_title_th', 'meta_tag_title_en', 'meta_tag_description_th', 'meta_tag_description_en', 'meta_tag_keywords_th', 'meta_tag_keywords_en'], 'string'],
             [['news_name_th', 'news_name_en'], 'string', 'max' => 100],
@@ -61,6 +62,7 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             'news_id' => 'News ID',
+            'news_category' => 'News Category',
             'news_name_th' => 'News Name Th',
             'news_name_en' => 'News Name En',
             'news_content_th' => 'News Content Th',

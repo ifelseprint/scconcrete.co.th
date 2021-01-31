@@ -58,10 +58,10 @@ return [
                 '<about_index:(about us|รู้จักเรา)>' => 'about/index',
                 // precast
                 '<precast_index:(sc precast|คอนกรีตอัดแรงสำเร็จรูป)>' => 'precast/index',
-                '<precast_view:(sc precast|คอนกรีตอัดแรงสำเร็จรูป)>/<slug>-<slug_id>' => 'precast/view',
+                '<precast_index:(sc precast|คอนกรีตอัดแรงสำเร็จรูป)>/<slug>-<slug_id>' => 'precast/view',
                 // concrete
                 '<concrete_index:(sc concrete|คอนกรีตผสมเสร็จ)>' => 'concrete/index',
-                '<concrete_view:(sc concrete|คอนกรีตผสมเสร็จ)>/<slug>-<slug_id>' => 'concrete/view',
+                '<concrete_index:(sc concrete|คอนกรีตผสมเสร็จ)>/<slug>-<slug_id>' => 'concrete/view',
                 // portfolio
                 '<portfolio_index:(portfolio|ผลงานที่ผ่านมา)>' => 'portfolio/index',
                 '<portfolio_index:(portfolio|ผลงานที่ผ่านมา)>/<portfolio_property:(property|อสังหาริมทรัพท์)>' => 'portfolio/property',
@@ -69,10 +69,12 @@ return [
                 '<portfolio_index:(portfolio|ผลงานที่ผ่านมา)>/<portfolio_project:(project|โครงการ)>' => 'portfolio/project',
                 // news
                 '<news_index:(news|กิจกรรมและข่าวสาร)>' => 'news/index',
-                '<news_view:(news|กิจกรรมและข่าวสาร)>/<slug>-<slug_id>' => 'news/view',
+                '<news_index:(news|กิจกรรมและข่าวสาร)>/<news_all:(social contribution activities|กิจกรรมช่วยเหลือสังคม|company activity|กิจกรรมของบริษัท)>' => 'news/all',
+                '<news_index:(news|กิจกรรมและข่าวสาร)>/<slug>-<slug_id>' => 'news/view',
                 // join
                 '<join_index:(join us|ร่วมงานกับเรา)>' => 'join/index',
-                '<join_view:(join us|ร่วมงานกับเรา)>/<slug>-<slug_id>' => 'join/view',
+                '<join_index:(join us|ร่วมงานกับเรา)>/<slug>-<slug_id>' => 'join/view',
+                '<join_index:(join us|ร่วมงานกับเรา)>/view/<id>' => 'join/jobs-view',
                 // contact
                 '<contact_index:(contact us|ติดต่อเรา)>' => 'contact/index',
                 '<contact_index:(contact)>/submit' => 'contact/index',

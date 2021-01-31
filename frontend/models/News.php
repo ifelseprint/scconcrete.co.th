@@ -11,4 +11,12 @@ class News extends \common\models\News
         $this->pageview++;
         $this->save();
     }
+    public function getNewsCategory()
+    {
+        return $this->hasOne(\common\models\NewsCategory::className(), ['id' => 'news_category']);
+    }
+    public function getNewsDetail()
+    {
+        return $this->hasOne(\common\models\NewsDetail::className(), ['news_id' => 'news_id']);
+    }
 }

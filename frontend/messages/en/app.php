@@ -10,5 +10,14 @@ return [
     'menu_project' => 'project',
     'menu_join_us' => 'join us',
     'menu_contact_us' => 'contact us',
+
+    'txt_readmore' => 'Read more',
+    'txt_activity' => 'Activity',
+    'txt_for_company' => 'Company',
+    'txt_for_social' => 'Social Contribution',
+    'txt_apply_jobs' => 'Apply for a position',
+
+    'social_activity' => 'social contribution activities',
+    'company_activity' => 'company activity'
 ];
 ?>

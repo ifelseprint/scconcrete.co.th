@@ -10,5 +10,14 @@ return [
     'menu_project' => 'โครงการ',
     'menu_join_us' => 'ร่วมงานกับเรา',
     'menu_contact_us' => 'ติดต่อเรา',
+
+    'txt_readmore' => 'อ่านเพิ่มเติม',
+    'txt_activity' => 'กิจกรรม',
+    'txt_for_company' => 'ของบริษัท',
+    'txt_for_social' => 'ช่วยเหลือสังคม',
+    'txt_apply_jobs' => 'สมัครงานในตำแหน่ง',
+
+    'social_activity' => 'กิจกรรมช่วยเหลือสังคม',
+    'company_activity' => 'กิจกรรมของบริษัท'
 ];
 ?>
