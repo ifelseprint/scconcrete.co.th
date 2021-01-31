@@ -79,7 +79,7 @@ class BannerController extends \yii\web\Controller
         $image_id = Yii::$app->request->post()['image_id'];
         $field_image = 'banner_image_'.$image_id;
         $field_path = 'banner_image_'.$image_id.'_path';
-        $Banner = Banner::findOne(['banner_page_id' => $id,'banner_mapping_id' => $mapping_id]);
+        $Banner = Banner::findOne(['banner_page_id' => $id]);
         $Banner->$field_image = null;
         $Banner->$field_path = null;
         $Banner->save();

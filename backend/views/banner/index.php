@@ -63,7 +63,7 @@ use yii\bootstrap\ActiveForm;
                 'attribute' => 'banner_page_id',
                 'label' => 'Page',
                 'format' => 'raw',
-                'contentOptions' => ['style' => 'width:70px'],
+                'contentOptions' => [],
                 'value' => function ($model) {
                     return $model->pages['page_name_th']." / ".$model->pages['page_name_en'];
                 },
@@ -72,7 +72,7 @@ use yii\bootstrap\ActiveForm;
                 'attribute' => 'banner_image_1',
                 'label' => 'Banner 1',
                 'format' => 'raw',
-                'contentOptions' => ['style' => 'width:70px'],
+                'contentOptions' => ['style' => 'width:80px'],
                 'value' => function ($model) {
                     return '<img src="'.str_replace('/admin', '', Yii::getAlias('@web')).'/uploads/'.$model->banner_image_1_path.'/'.$model->banner_image_1.'" width="50">';
                 },
@@ -81,7 +81,7 @@ use yii\bootstrap\ActiveForm;
                 'attribute' => 'banner_image_2',
                 'label' => 'Banner 2',
                 'format' => 'raw',
-                'contentOptions' => ['style' => 'width:70px'],
+                'contentOptions' => ['style' => 'width:80px'],
                 'value' => function ($model) {
                     return '<img src="'.str_replace('/admin', '', Yii::getAlias('@web')).'/uploads/'.$model->banner_image_2_path.'/'.$model->banner_image_2.'" width="50">';
                 },
@@ -90,7 +90,7 @@ use yii\bootstrap\ActiveForm;
                 'attribute' => 'banner_image_3',
                 'label' => 'Banner 3',
                 'format' => 'raw',
-                'contentOptions' => ['style' => 'width:70px'],
+                'contentOptions' => ['style' => 'width:80px'],
                 'value' => function ($model) {
                     return '<img src="'.str_replace('/admin', '', Yii::getAlias('@web')).'/uploads/'.$model->banner_image_3_path.'/'.$model->banner_image_3.'" width="50">';
                 },
@@ -99,7 +99,7 @@ use yii\bootstrap\ActiveForm;
                 'attribute' => 'banner_image_4',
                 'label' => 'Banner 4',
                 'format' => 'raw',
-                'contentOptions' => ['style' => 'width:70px'],
+                'contentOptions' => ['style' => 'width:80px'],
                 'value' => function ($model) {
                     return '<img src="'.str_replace('/admin', '', Yii::getAlias('@web')).'/uploads/'.$model->banner_image_4_path.'/'.$model->banner_image_4.'" width="50">';
                 },
