@@ -86,17 +86,14 @@ class PortfolioController extends \yii\web\Controller
 		]);
     }
 
-    public function actionDelete()
+    public function actionDelete($id)
     {
-    	$id = Yii::$app->request->get('id');
-    	$PortfolioDetail = \common\models\PortfolioDetail::find()
-		->where(['portfolio_id'=>$id])
-		->delete();
 
     	$Portfolio = \common\models\Portfolio::find()
 		->where(['portfolio_id'=>$id])
 		->one()
 		->delete();
+        \common\models\PortfolioDetail::deleteAll(['portfolio_id' => $id]);
 
 		$model = new Portfolio();
 		$search = Yii::$app->request->queryParams;
