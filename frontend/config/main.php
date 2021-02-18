@@ -57,8 +57,8 @@ return [
                 // about
                 '<about_index:(about us|รู้จักเรา)>' => 'about/index',
                 // precast
-                '<precast_index:(sc precast|คอนกรีตอัดแรงสำเร็จรูป)>' => 'precast/index',
-                '<precast_index:(sc precast|คอนกรีตอัดแรงสำเร็จรูป)>/<slug>-<slug_id>' => 'precast/view',
+                '<precast_index:(sc precast|ผลิตภัณฑ์คอนกรีตสำเร็จรูป)>' => 'precast/index',
+                '<precast_index:(sc precast|ผลิตภัณฑ์คอนกรีตสำเร็จรูป)>/<slug>-<slug_id>' => 'precast/view',
                 // concrete
                 '<concrete_index:(sc concrete|คอนกรีตผสมเสร็จ)>' => 'concrete/index',
                 '<concrete_index:(sc concrete|คอนกรีตผสมเสร็จ)>/<slug>-<slug_id>' => 'concrete/view',

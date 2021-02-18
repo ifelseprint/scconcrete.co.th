@@ -48,7 +48,7 @@ use yii\helpers\Url;
             </div>
 
             <div class="col-xs-12 col-lg-8" style="padding-left: 0px;">
-                <div style="position: absolute;top: 0;z-index: 100;background-color: rgba(12,12,12,0.8);margin: 30px 15px;height: 75%;width: 55%; padding: 40px 20px;">
+                <div style="position: absolute;top: 0;z-index: 100;background-color: rgba(12,12,12,0.8);margin: 30px 15px;height: 75%;width: 55%; padding: 40px 20px;overflow: auto;">
                     <?php
                       $product_name = 'product_name_'.Yii::$app->language;
                       $product_detail = 'product_detail_'.Yii::$app->language;
