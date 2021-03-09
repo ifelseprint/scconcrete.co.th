@@ -86,7 +86,17 @@ $url = $action=='create'? $action : $action.'/'.$Partner['partner_id'];
         <!-- /.card-header -->
         <div class="card-body" style="display: block;">
           <div class="form-group-sm row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
+              <table border="1" width="100%" cellpadding="10" style="border: 1px solid #ccc;">
+                <tr>
+                  <td colspan="2">
+                    <label class="col-form-label-sm">Link</label>
+                    <?= $form->field($Partner, 'partner_link')->textInput()?>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-sm-4">
               <table border="1" width="100%" cellpadding="10" style="border: 1px solid #ccc;">
                 <tr>
                   <td width="100">
@@ -99,7 +109,7 @@ $url = $action=='create'? $action : $action.'/'.$Partner['partner_id'];
                 </tr>
               </table>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
               <table border="1" width="100%" cellpadding="10" style="border: 1px solid #17a2b8;background: #17a2b8;color: #fff;">
                 <tr>
                   <td colspan="2">

@@ -12,6 +12,7 @@ use Yii;
  * @property string|null $partner_name_en
  * @property string|null $partner_image
  * @property string|null $partner_image_path
+ * @property string|null $partner_link
  * @property int|null $is_active 0 = inactive, 1 = active
  * @property int|null $created_user
  * @property string|null $created_date
@@ -39,6 +40,7 @@ class Partner extends \yii\db\ActiveRecord
             [['created_date', 'modified_date'], 'safe'],
             [['partner_name_th', 'partner_name_en', 'partner_image_path'], 'string', 'max' => 100],
             [['partner_image'], 'string', 'max' => 50],
+            [['partner_link'], 'string', 'max' => 200],
         ];
     }
 
@@ -53,6 +55,7 @@ class Partner extends \yii\db\ActiveRecord
             'partner_name_en' => 'Partner Name En',
             'partner_image' => 'Partner Image',
             'partner_image_path' => 'Partner Image Path',
+            'partner_link' => 'Partner Link',
             'is_active' => 'Is Active',
             'created_user' => 'Created User',
             'created_date' => 'Created Date',

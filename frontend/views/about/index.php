@@ -145,7 +145,7 @@ AboutAsset::register($this);
 					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
 					                            <article class="entry entry-display">
 					                              <figure class="entry-media">
-					                                <a href="#">
+					                                <a target="_blank" href="<?=$value->partner_link;?>">
 					                                  	<img src="<?=Url::base(true);?>/uploads/<?=$value->partner_image_path;?>/<?=$value->partner_image;?>" alt="image desc">
 					                                  	<div class="desc">
 					                                  		<div><?=$value->partner_name_th;?></div>
