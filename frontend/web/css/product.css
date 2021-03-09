@@ -67,6 +67,7 @@
     font-weight: 500;
     background: transparent;
     color: #fff;
+    width: 50%;
 }
 .product-detail-posts td.bg:first-child {
 	background-image: url(../img/product_title_bg.jpg);
