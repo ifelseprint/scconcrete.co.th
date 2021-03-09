@@ -72,11 +72,25 @@ use frontend\widgets\ProductFooter;
                         outline-style: none;
                         border-color: transparent;
                     }
+                    .footer-icon-social{
+                        float: right; text-align: right;
+                    }
+                    .footer-icon-social ul{
+                        display: flex;align-items: center;
+                    }
+                    .footer-icon-social ul li{
+                        padding: 0px 5px;
+                    }
                 </style>
                 <div class="col-sm-12 col-lg-3">
-                    <div style="float: right; text-align: right;">
+                    <div class='footer-icon-social'>
                         <ul>
-                            <li><a href="#" style="padding: 4px 8px;border: 2px solid #444444;border-radius: 50% 50%;margin: auto 2px;"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                            <li>
+                                <a href="https://www.facebook.com/scconcretethailand" target="_blank"><img src ="<?=Url::base(true);?>/img/icon-fb.png" width="25" ></a>
+                            </li>
+                            <li>
+                                <a href="https://lin.ee/lMLPewN" target="_blank"><img src ="<?=Url::base(true);?>/img/iconline.png" width="25" ></a>
+                            </li>
                         </ul>
                     </div>
                     <div style="float: right;">
