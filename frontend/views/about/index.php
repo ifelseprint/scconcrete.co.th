@@ -81,7 +81,8 @@ AboutAsset::register($this);
 				</div>
 			</div>
 		</div>
-		<div class="about-block section4" style="background: #efefef">
+
+		<!-- <div class="about-block section4" style="background: #efefef">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12" style="padding: 60px;">
@@ -112,32 +113,6 @@ AboutAsset::register($this);
 					                    }'>
 					                      <div class="owl-stage-outer">
 					                        <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.4s ease 0s; width: 1188px;">
-					                          <!-- <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-					                            <article class="entry entry-display">
-					                              <figure class="entry-media">
-					                                <a href="#">
-					                                  	<img src="<?=Url::base(true);?>/img/logo_company_1.jpg" alt="image desc" >
-					                                  	<div class="desc">
-					                                  		<div>บริษัท ซุน คอนสตรัคชั่น แอนด์ เอ็นจิเนียริ่ง จำกัด</div>
-															<div>SUEN CONSTRUCTION AND ENGINEERING CO.,LTD</div>
-														</div>
-					                                </a>
-					                              </figure>
-					                            </article>
-					                          </div>
-					                          <div class="owl-item active" style="width: 376px; margin-right: 20px;">
-					                            <article class="entry entry-display">
-					                              <figure class="entry-media">
-					                                <a href="#">
-					                                  	<img src="<?=Url::base(true);?>/img/logo_company_2.jpg" alt="image desc">
-					                                  	<div class="desc">
-					                                  		<div>บริษัท ซุน เจนเนอรัล แอนด์ เอ็นจิเนียริ่ง จำกัด</div>
-															<div>SUEN GENERAL AND ENGINEERING CO.,LTD</div>
-														</div>
-					                                </a>
-					                              </figure>
-					                            </article>
-					                          </div> -->
 					                          <?php
 					                          foreach ($Partner as $key => $value) {
 					                            // $partner_name = 'partner_name_'.Yii::$app->language;
@@ -170,7 +145,7 @@ AboutAsset::register($this);
 					                      <div class="owl-dots disabled">
 					                        <button role="button" class="owl-dot active"><span></span></button>
 					                      </div>
-					                  </div><!-- End .owl-carousel -->
+					                  </div>
 					                </div>
 					            </div>
 					        </div>
@@ -178,6 +153,6 @@ AboutAsset::register($this);
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </main>
