@@ -62,11 +62,12 @@
 	padding: 15px 0px;
 }
 .product-detail-posts .product-title{
-	font-size: 24px;
+	font-size: 20px;
     padding: 5px 0px;
     font-weight: 500;
     background: transparent;
     color: #fff;
+    width: 50%;
 }
 .product-detail-posts td.bg:first-child {
 	background-image: url(../img/product_title_bg.jpg);
