@@ -35,9 +35,9 @@ use frontend\widgets\ProductMenu;
                         <li class="<?php echo (Yii::$app->controller->id=="portfolio" ? 'active' : '' )?>">
                             <a href="#"><?= Yii::t('app', 'menu_portfolio');?></a>
                             <ul>
-                                <li class="<?php echo (Yii::$app->controller->action->id=="property" ? 'active' : '' )?>">
+                                <!-- <li class="<?php echo (Yii::$app->controller->action->id=="property" ? 'active' : '' )?>">
                                     <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_portfolio');?>/<?= Yii::t('app', 'menu_property');?>"><?= Yii::t('app', 'menu_property');?></a>
-                                </li>
+                                </li> -->
                                 <li class="<?php echo (Yii::$app->controller->action->id=="project" ? 'active' : '' )?>">
                                     <a href="<?=Url::base(true);?>/<?= Yii::t('app', 'menu_portfolio');?>/<?= Yii::t('app', 'menu_project');?>"><?= Yii::t('app', 'menu_project');?></a>
                                 </li>
